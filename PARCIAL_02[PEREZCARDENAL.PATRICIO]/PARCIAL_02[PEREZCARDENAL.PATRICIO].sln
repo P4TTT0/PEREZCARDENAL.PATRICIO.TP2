@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32802.440
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PARCIAL_02[PEREZCARDENAL.PATRICIO]", "PARCIAL_02[PEREZCARDENAL.PATRICIO]\PARCIAL_02[PEREZCARDENAL.PATRICIO].csproj", "{4DC00406-9084-416A-83D1-D4B58DB19A47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FORMS_PARCIAL_02[PEREZCARDENAL.PATRICIO]", "FORMS_PARCIAL_02[PEREZCARDENAL.PATRICIO]\FORMS_PARCIAL_02[PEREZCARDENAL.PATRICIO].csproj", "{397E4D33-35CE-4872-9F5C-A5B0E13D7D93}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4DC00406-9084-416A-83D1-D4B58DB19A47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DC00406-9084-416A-83D1-D4B58DB19A47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DC00406-9084-416A-83D1-D4B58DB19A47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DC00406-9084-416A-83D1-D4B58DB19A47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{397E4D33-35CE-4872-9F5C-A5B0E13D7D93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{397E4D33-35CE-4872-9F5C-A5B0E13D7D93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{397E4D33-35CE-4872-9F5C-A5B0E13D7D93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{397E4D33-35CE-4872-9F5C-A5B0E13D7D93}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {010AF021-E11E-46E9-B83B-83F01E5DF496}
+	EndGlobalSection
+EndGlobal

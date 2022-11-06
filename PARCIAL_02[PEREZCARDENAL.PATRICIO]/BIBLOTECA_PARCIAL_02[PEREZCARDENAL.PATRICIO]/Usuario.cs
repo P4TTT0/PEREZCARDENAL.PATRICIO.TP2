@@ -9,13 +9,16 @@ namespace BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_
     public class Usuario
     {
         #region --ATRIBUTOS--
+        private int id;
         private string nombreUsuario;
         private string contraseña;
         #endregion
 
-        #region --PROPIEDADES--
+        #region --PROPIEDADES-- 
+        public int Id { get => id; set => id = value; }
         public string NombreUsuario { get => nombreUsuario; set => nombreUsuario = value; }
         public string Contraseña { get => contraseña;  set => contraseña = value; }
+       
         #endregion
 
         #region --CONSTRUCTORES--

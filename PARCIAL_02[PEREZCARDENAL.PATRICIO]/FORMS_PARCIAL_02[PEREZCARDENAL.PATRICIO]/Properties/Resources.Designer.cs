@@ -113,6 +113,16 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FOTO_PERFIL {
+            get {
+                object obj = ResourceManager.GetObject("FOTO PERFIL", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap OJO_SHOWPASSWORD {
             get {
                 object obj = ResourceManager.GetObject("OJO_SHOWPASSWORD", resourceCulture);
@@ -146,6 +156,36 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.Properties {
         internal static System.Drawing.Bitmap OJO_SHOWPASSWORD3 {
             get {
                 object obj = ResourceManager.GetObject("OJO_SHOWPASSWORD3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SUMA_CREARPARTIDA {
+            get {
+                object obj = ResourceManager.GetObject("SUMA_CREARPARTIDA", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SUMA_CREARPARTIDA1 {
+            get {
+                object obj = ResourceManager.GetObject("SUMA_CREARPARTIDA1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TILDE_EXITO {
+            get {
+                object obj = ResourceManager.GetObject("TILDE_EXITO", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -30,6 +30,10 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
         private void InitializeComponent()
         {
             this.panelDerecho = new System.Windows.Forms.Panel();
+            this.labelExitoUsuarioRegistrado = new System.Windows.Forms.Label();
+            this.pictureBoxExito = new System.Windows.Forms.PictureBox();
+            this.labelErrorUsuarioInexistente = new System.Windows.Forms.Label();
+            this.pictureBoxError = new System.Windows.Forms.PictureBox();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.labelLogin = new System.Windows.Forms.Label();
             this.textBoxUsuario = new System.Windows.Forms.TextBox();
@@ -41,13 +45,12 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
             this.buttonRegistrarse = new System.Windows.Forms.Button();
             this.buttonMostrarContraseña = new System.Windows.Forms.Button();
             this.buttonJugar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.labelErrorUsuarioInexistente = new System.Windows.Forms.Label();
             this.panelDerecho.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExito)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxError)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLineaUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLineaContraseña)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelDerecho
@@ -56,14 +59,68 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelDerecho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.panelDerecho.Controls.Add(this.labelExitoUsuarioRegistrado);
+            this.panelDerecho.Controls.Add(this.pictureBoxExito);
             this.panelDerecho.Controls.Add(this.labelErrorUsuarioInexistente);
-            this.panelDerecho.Controls.Add(this.pictureBox1);
+            this.panelDerecho.Controls.Add(this.pictureBoxError);
             this.panelDerecho.Controls.Add(this.pictureBoxLogo);
             this.panelDerecho.Location = new System.Drawing.Point(340, 0);
             this.panelDerecho.MinimumSize = new System.Drawing.Size(428, 311);
             this.panelDerecho.Name = "panelDerecho";
             this.panelDerecho.Size = new System.Drawing.Size(478, 436);
             this.panelDerecho.TabIndex = 0;
+            // 
+            // labelExitoUsuarioRegistrado
+            // 
+            this.labelExitoUsuarioRegistrado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelExitoUsuarioRegistrado.AutoSize = true;
+            this.labelExitoUsuarioRegistrado.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelExitoUsuarioRegistrado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(194)))), ((int)(((byte)(32)))));
+            this.labelExitoUsuarioRegistrado.Location = new System.Drawing.Point(94, 401);
+            this.labelExitoUsuarioRegistrado.Name = "labelExitoUsuarioRegistrado";
+            this.labelExitoUsuarioRegistrado.Size = new System.Drawing.Size(233, 26);
+            this.labelExitoUsuarioRegistrado.TabIndex = 4;
+            this.labelExitoUsuarioRegistrado.Text = "¡USUARIO REGISTRADO!";
+            this.labelExitoUsuarioRegistrado.Visible = false;
+            // 
+            // pictureBoxExito
+            // 
+            this.pictureBoxExito.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBoxExito.Image = global::FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.Properties.Resources.TILDE_EXITO;
+            this.pictureBoxExito.Location = new System.Drawing.Point(10, 390);
+            this.pictureBoxExito.Name = "pictureBoxExito";
+            this.pictureBoxExito.Size = new System.Drawing.Size(48, 37);
+            this.pictureBoxExito.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxExito.TabIndex = 3;
+            this.pictureBoxExito.TabStop = false;
+            this.pictureBoxExito.Visible = false;
+            // 
+            // labelErrorUsuarioInexistente
+            // 
+            this.labelErrorUsuarioInexistente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelErrorUsuarioInexistente.AutoSize = true;
+            this.labelErrorUsuarioInexistente.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelErrorUsuarioInexistente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(32)))), ((int)(((byte)(44)))));
+            this.labelErrorUsuarioInexistente.Location = new System.Drawing.Point(98, 401);
+            this.labelErrorUsuarioInexistente.Name = "labelErrorUsuarioInexistente";
+            this.labelErrorUsuarioInexistente.Size = new System.Drawing.Size(229, 26);
+            this.labelErrorUsuarioInexistente.TabIndex = 2;
+            this.labelErrorUsuarioInexistente.Text = "¡USUARIO INEXISTENTE!";
+            this.labelErrorUsuarioInexistente.Visible = false;
+            // 
+            // pictureBoxError
+            // 
+            this.pictureBoxError.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBoxError.Enabled = false;
+            this.pictureBoxError.Image = global::FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.Properties.Resources.EXCLAMACION_ERROR;
+            this.pictureBoxError.Location = new System.Drawing.Point(10, 390);
+            this.pictureBoxError.Margin = new System.Windows.Forms.Padding(10, 3, 3, 10);
+            this.pictureBoxError.Name = "pictureBoxError";
+            this.pictureBoxError.Size = new System.Drawing.Size(48, 37);
+            this.pictureBoxError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxError.TabIndex = 1;
+            this.pictureBoxError.TabStop = false;
+            this.pictureBoxError.Visible = false;
             // 
             // pictureBoxLogo
             // 
@@ -86,9 +143,9 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
             this.labelLogin.Location = new System.Drawing.Point(19, 19);
             this.labelLogin.Margin = new System.Windows.Forms.Padding(10, 10, 3, 0);
             this.labelLogin.Name = "labelLogin";
-            this.labelLogin.Size = new System.Drawing.Size(158, 43);
+            this.labelLogin.Size = new System.Drawing.Size(144, 43);
             this.labelLogin.TabIndex = 1;
-            this.labelLogin.Text = "SING IN.";
+            this.labelLogin.Text = "LOG IN.";
             // 
             // textBoxUsuario
             // 
@@ -101,6 +158,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
             this.textBoxUsuario.PlaceholderText = "Usuario";
             this.textBoxUsuario.Size = new System.Drawing.Size(300, 40);
             this.textBoxUsuario.TabIndex = 2;
+            this.textBoxUsuario.Enter += new System.EventHandler(this.textBoxUsuario_Enter);
             // 
             // labelUsuario
             // 
@@ -143,6 +201,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
             this.textBoxContraseña.PlaceholderText = "Contraseña";
             this.textBoxContraseña.Size = new System.Drawing.Size(300, 40);
             this.textBoxContraseña.TabIndex = 5;
+            this.textBoxContraseña.Enter += new System.EventHandler(this.textBoxContraseña_Enter);
             // 
             // label1
             // 
@@ -201,30 +260,6 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
             this.buttonJugar.UseVisualStyleBackColor = false;
             this.buttonJugar.Click += new System.EventHandler(this.buttonJugar_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Enabled = false;
-            this.pictureBox1.Image = global::FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.Properties.Resources.EXCLAMACION_ERROR;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 398);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(10, 3, 3, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 28);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // labelErrorUsuarioInexistente
-            // 
-            this.labelErrorUsuarioInexistente.AutoSize = true;
-            this.labelErrorUsuarioInexistente.Enabled = false;
-            this.labelErrorUsuarioInexistente.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelErrorUsuarioInexistente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(32)))), ((int)(((byte)(44)))));
-            this.labelErrorUsuarioInexistente.Location = new System.Drawing.Point(64, 401);
-            this.labelErrorUsuarioInexistente.Name = "labelErrorUsuarioInexistente";
-            this.labelErrorUsuarioInexistente.Size = new System.Drawing.Size(229, 26);
-            this.labelErrorUsuarioInexistente.TabIndex = 2;
-            this.labelErrorUsuarioInexistente.Text = "¡USUARIO INEXISTENTE!";
-            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -248,10 +283,11 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
             this.Load += new System.EventHandler(this.FormLogin_Load);
             this.panelDerecho.ResumeLayout(false);
             this.panelDerecho.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExito)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxError)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLineaUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLineaContraseña)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,7 +308,9 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
         private System.Windows.Forms.Button buttonJugar;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Label labelErrorUsuarioInexistente;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxError;
+        private System.Windows.Forms.Label labelExitoUsuarioRegistrado;
+        private System.Windows.Forms.PictureBox pictureBoxExito;
     }
 }
 

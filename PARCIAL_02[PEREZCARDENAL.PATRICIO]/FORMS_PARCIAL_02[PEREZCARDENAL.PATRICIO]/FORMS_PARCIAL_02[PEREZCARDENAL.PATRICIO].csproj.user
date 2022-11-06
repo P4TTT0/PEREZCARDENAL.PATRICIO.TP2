@@ -4,7 +4,25 @@
     <Compile Update="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormMenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FormRegistrarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FORMS INTERNOS\FormCrearSala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FORMS INTERNOS\FormIPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FORMS INTERNOS\FormJugar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FORMS INTERNOS\FormPartida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FORMS INTERNOS\FormVisualizarSalas.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

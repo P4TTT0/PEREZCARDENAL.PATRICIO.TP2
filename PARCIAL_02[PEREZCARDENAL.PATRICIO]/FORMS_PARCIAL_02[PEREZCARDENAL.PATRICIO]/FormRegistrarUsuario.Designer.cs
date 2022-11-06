@@ -52,9 +52,9 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
             this.labelRegistrar.Location = new System.Drawing.Point(19, 19);
             this.labelRegistrar.Margin = new System.Windows.Forms.Padding(10, 10, 3, 0);
             this.labelRegistrar.Name = "labelRegistrar";
-            this.labelRegistrar.Size = new System.Drawing.Size(188, 43);
+            this.labelRegistrar.Size = new System.Drawing.Size(158, 43);
             this.labelRegistrar.TabIndex = 0;
-            this.labelRegistrar.Text = "REGISTER";
+            this.labelRegistrar.Text = "SIGN IN.";
             // 
             // pictureBoxLogo
             // 

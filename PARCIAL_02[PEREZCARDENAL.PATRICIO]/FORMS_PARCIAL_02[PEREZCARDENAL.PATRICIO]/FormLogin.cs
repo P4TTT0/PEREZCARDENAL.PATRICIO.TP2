@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_;
+using FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS;
 
 namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
 {
@@ -18,7 +19,11 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
             InitializeComponent();
         }
 
-        ConexionBaseDatos baseDatos = new ConexionBaseDatos();
+        private static Usuario usuarioActual;
+
+        private ConexionBaseDatos baseDatos = new ConexionBaseDatos();
+
+        public static Usuario UsuarioActual { get => usuarioActual; set => usuarioActual = value; }
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
@@ -39,16 +44,19 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
 
         private void buttonJugar_Click(object sender, EventArgs e)
         {
-            if(this.baseDatos.ComprobarUsuario(new Usuario(this.textBoxUsuario.Text, this.textBoxContraseña.Text)))
+            Usuario usuarioActual = new Usuario(this.textBoxUsuario.Text, this.textBoxContraseña.Text);
+            if(this.baseDatos.ComprobarUsuario(usuarioActual))
             {
-                MessageBox.Show("CONECTADO");
+                usuarioActual.Id = this.baseDatos.RetornarIdUsuario(usuarioActual);
+                FormMenuPrincipal formMenu = new FormMenuPrincipal();
+                FormLogin.usuarioActual = usuarioActual;
+                formMenu.Show();
+                this.Hide();
             }
             else
             {
-                MessageBox.Show("Usuario Inexsistente");
+                this.ActualizarMensajeInformativo(1);
             }
-
-
         }
 
         private void buttonRegistrarse_Click(object sender, EventArgs e)
@@ -57,11 +65,47 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
 
             if (formRegistrar.ShowDialog() == DialogResult.OK)
             {
-                if (this.baseDatos.AgregarUsuario(formRegistrar.NuevoUsuario))
+                if (this.baseDatos.AgregarUsuario(formRegistrar.NuevoUsuario) && this.baseDatos.AgregarEstadisticasUsuario(formRegistrar.NuevoUsuario))
                 {
-                    MessageBox.Show("USUARIO AGREGADO");
+                    this.ActualizarMensajeInformativo(2);
                 }
             }
+        }
+
+        private void ActualizarMensajeInformativo()
+        {
+            this.pictureBoxError.Visible = false;
+            this.labelErrorUsuarioInexistente.Visible = false;
+            this.pictureBoxExito.Visible = false;
+            this.labelExitoUsuarioRegistrado.Visible = false;
+        }
+
+        private void ActualizarMensajeInformativo(int opcion)
+        {
+            this.ActualizarMensajeInformativo();
+
+            switch(opcion)
+            {
+                case 1:
+                    this.pictureBoxError.Visible = true;
+                    this.labelErrorUsuarioInexistente.Visible = true;
+                    break;
+                case 2:
+                    this.pictureBoxExito.Visible = true;
+                    this.labelExitoUsuarioRegistrado.Visible = true;
+                    break;
+            }
+
+        }
+
+        private void textBoxUsuario_Enter(object sender, EventArgs e)
+        {
+            this.ActualizarMensajeInformativo();
+        }
+
+        private void textBoxContraseña_Enter(object sender, EventArgs e)
+        {
+            this.ActualizarMensajeInformativo();
         }
     }
 }

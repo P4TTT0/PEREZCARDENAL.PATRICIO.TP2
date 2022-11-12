@@ -31,6 +31,8 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
         {
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panelHeader = new System.Windows.Forms.Panel();
+            this.buttonInicio = new System.Windows.Forms.Button();
+            this.buttonCrearSala = new System.Windows.Forms.Button();
             this.buttonHistorial = new System.Windows.Forms.Button();
             this.buttonEstadisticas = new System.Windows.Forms.Button();
             this.buttonJugar = new System.Windows.Forms.Button();
@@ -54,6 +56,8 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
             // panelHeader
             // 
             this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.panelHeader.Controls.Add(this.buttonInicio);
+            this.panelHeader.Controls.Add(this.buttonCrearSala);
             this.panelHeader.Controls.Add(this.buttonHistorial);
             this.panelHeader.Controls.Add(this.buttonEstadisticas);
             this.panelHeader.Controls.Add(this.buttonJugar);
@@ -62,6 +66,40 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
             this.panelHeader.Name = "panelHeader";
             this.panelHeader.Size = new System.Drawing.Size(997, 80);
             this.panelHeader.TabIndex = 2;
+            // 
+            // buttonInicio
+            // 
+            this.buttonInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.buttonInicio.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonInicio.FlatAppearance.BorderSize = 0;
+            this.buttonInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonInicio.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonInicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.buttonInicio.Location = new System.Drawing.Point(691, 0);
+            this.buttonInicio.Margin = new System.Windows.Forms.Padding(10);
+            this.buttonInicio.Name = "buttonInicio";
+            this.buttonInicio.Size = new System.Drawing.Size(160, 80);
+            this.buttonInicio.TabIndex = 4;
+            this.buttonInicio.Text = "INICIO";
+            this.buttonInicio.UseVisualStyleBackColor = false;
+            this.buttonInicio.Click += new System.EventHandler(this.buttonInicio_Click);
+            // 
+            // buttonCrearSala
+            // 
+            this.buttonCrearSala.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.buttonCrearSala.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonCrearSala.FlatAppearance.BorderSize = 0;
+            this.buttonCrearSala.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCrearSala.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonCrearSala.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.buttonCrearSala.Location = new System.Drawing.Point(531, 0);
+            this.buttonCrearSala.Margin = new System.Windows.Forms.Padding(10);
+            this.buttonCrearSala.Name = "buttonCrearSala";
+            this.buttonCrearSala.Size = new System.Drawing.Size(160, 80);
+            this.buttonCrearSala.TabIndex = 3;
+            this.buttonCrearSala.Text = "CREAR SALA";
+            this.buttonCrearSala.UseVisualStyleBackColor = false;
+            this.buttonCrearSala.Click += new System.EventHandler(this.buttonCrearSala_Click);
             // 
             // buttonHistorial
             // 
@@ -147,5 +185,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
         private System.Windows.Forms.Button buttonEstadisticas;
         private System.Windows.Forms.Button buttonJugar;
         private System.Windows.Forms.Panel panelContenedor;
+        private System.Windows.Forms.Button buttonInicio;
+        private System.Windows.Forms.Button buttonCrearSala;
     }
 }

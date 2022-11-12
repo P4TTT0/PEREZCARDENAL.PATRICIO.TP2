@@ -28,5 +28,24 @@ namespace BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_
             this.valor = valor;
         }
         #endregion
+
+        #region --METODOS--
+        public static bool operator ==(Carta cartaUno, Carta cartaDos)
+        {
+            bool validacion = false;
+
+            if(cartaUno is not null && cartaDos is not null)
+            {
+                validacion = cartaUno.Palo == cartaDos.Palo;
+            }
+
+            return validacion;
+        }
+
+        public static bool operator !=(Carta cartaUno, Carta cartaDos)
+        {
+            return !(cartaUno == cartaDos);
+        }
+        #endregion
     }
 }

@@ -24,7 +24,6 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
         {
             this.labelUsuario.Text = FormLogin.UsuarioActual.NombreUsuario;
             this.estadisticasUsuario = this.baseDatos.ObtenerEstadisticasUsuario(FormLogin.UsuarioActual);
-            MessageBox.Show($"{FormLogin.UsuarioActual.Id}");
 
             this.labelValorPartidasGanadas.Text = this.estadisticasUsuario.PartidasGanadas.ToString();
             this.labelValorPartidasPerdidas.Text = this.estadisticasUsuario.PartidasPerdidas.ToString();

@@ -118,23 +118,29 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="FLECHA_LOG-IN" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FLECHA_LOG-IN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ESPADA_LOGO-TRUCO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ESPADA_LOGO-TRUCO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="TILDE_EXITO" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TILDE_EXITO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FLECHA_LOG-IN1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FLECHA_LOG-IN1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="OJO_SHOWPASSWORD" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OJO_SHOWPASSWORD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FOTO PERFIL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FOTO PERFIL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="EXCLAMACION_ERROR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EXCLAMACION_ERROR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ESPADA_LOGO-TRUCO" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ESPADA_LOGO-TRUCO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="TILDE_EXITO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TILDE_EXITO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SUMA_CREARPARTIDA1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SUMA_CREARPARTIDA1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FLECHA_LOG-IN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FLECHA_LOG-IN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MONEDA_PALO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MONEDA_PALO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="COPA_PALO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\COPA_PALO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FLECHA_LOG-IN2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FLECHA_LOG-IN2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,8 +148,20 @@
   <data name="OJO_SHOWPASSWORD2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OJO_SHOWPASSWORD2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="FLECHA_LOG-IN1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FLECHA_LOG-IN1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ESPADA_PALO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ESPADA_PALO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BASTO_PALO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BASTO_PALO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="OJO_SHOWPASSWORD1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OJO_SHOWPASSWORD1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OJO_SHOWPASSWORD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OJO_SHOWPASSWORD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="OJO_SHOWPASSWORD3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OJO_SHOWPASSWORD3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,10 +169,7 @@
   <data name="SUMA_CREARPARTIDA" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SUMA_CREARPARTIDA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FOTO PERFIL" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FOTO PERFIL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SUMA_CREARPARTIDA1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SUMA_CREARPARTIDA1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ORO_PALO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ORO_PALO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

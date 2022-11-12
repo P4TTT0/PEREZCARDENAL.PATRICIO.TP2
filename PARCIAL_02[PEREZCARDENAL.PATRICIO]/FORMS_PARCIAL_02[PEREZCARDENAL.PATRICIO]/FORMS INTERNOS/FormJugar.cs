@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,19 +18,39 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             InitializeComponent();
         }
 
-        private void buttonCrearSala_Click(object sender, EventArgs e)
+        private void FormJugar_Load(object sender, EventArgs e)
         {
-            FormCrearSala crearSala = new FormCrearSala();
-            if (crearSala.ShowDialog() == DialogResult.OK)
-            {
+            this.labelValorUsuario.Text = FormLogin.UsuarioActual.NombreUsuario;
+            Task.Run(() => { this.CambiarHora(); });
+        }
 
+        private void AsignarHora()
+        {
+            if (this.labelValorFecha.InvokeRequired)
+            {
+                Action delegado = new Action(this.AsignarHora);
+
+                this.labelValorFecha.Invoke(delegado);
+            }
+            else
+            {
+                this.labelValorFecha.Text = DateTime.Now.ToString();
             }
         }
 
-        private void buttonVerSalas_Click(object sender, EventArgs e)
+        private void CambiarHora()
         {
-            FormVisualizarSalas formSalas = new FormVisualizarSalas();
-            formSalas.ShowDialog();
+            while(true)
+            {
+                this.AsignarHora();
+                Thread.Sleep(1000);
+            }
+        }
+
+        private void buttonCrearSala_Click(object sender, EventArgs e)
+        {
+            FormCrearSala formCrearSala = new FormCrearSala();
+            formCrearSala.ShowDialog();
         }
     }
 }

@@ -298,6 +298,49 @@ namespace BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_
             return validacion;
         }
 
+        public bool ModificarSala(Salas sala)
+        {
+            bool validacion = true;
+
+            try
+            {
+                this.comando = new SqlCommand();
+                this.comando.Parameters.AddWithValue("@Id", sala.Id);
+                this.comando.Parameters.AddWithValue("@EstadoPartida", sala.EstadoPartida);
+                this.comando.Parameters.AddWithValue("@Ronda", sala.Ronda);
+
+                string comandoSql = "UPDATE Salas ";
+                comandoSql += "SET EstadoPartida = @EstadoPartida, Ronda = @Ronda ";
+                comandoSql += "WHERE Id = @Id";
+
+                this.comando.CommandType = CommandType.Text;
+                this.comando.CommandText = comandoSql;
+                this.comando.Connection = this.conexion;
+
+                this.conexion.Open();
+
+                int filasAfectadas = this.comando.ExecuteNonQuery();
+
+                if (filasAfectadas == 0)
+                {
+                    validacion = false;
+                }
+            }
+            catch (Exception e)
+            {
+                validacion = false;
+            }
+            finally
+            {
+                if (this.conexion.State == ConnectionState.Open)
+                {
+                    this.conexion.Close();
+                }
+            }
+
+            return validacion;
+        }
+
         public bool ComprobarUsuario(Usuario auxUsuario)
         {
             bool validacion = false;

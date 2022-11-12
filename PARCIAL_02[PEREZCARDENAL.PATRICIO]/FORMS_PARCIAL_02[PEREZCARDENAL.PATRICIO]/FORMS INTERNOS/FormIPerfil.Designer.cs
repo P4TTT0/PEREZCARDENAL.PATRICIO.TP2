@@ -39,7 +39,9 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.labelValorPartidasPerdidas = new System.Windows.Forms.Label();
             this.labelValorPartidasJugadas = new System.Windows.Forms.Label();
             this.labelValorWinRate = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -58,8 +60,9 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             // 
             this.labelUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelUsuario.AutoSize = true;
+            this.labelUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
             this.labelUsuario.Font = new System.Drawing.Font("Franklin Gothic Medium", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.labelUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.labelUsuario.Location = new System.Drawing.Point(572, 548);
             this.labelUsuario.Margin = new System.Windows.Forms.Padding(10, 10, 3, 0);
             this.labelUsuario.Name = "labelUsuario";
@@ -71,8 +74,9 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             // 
             this.labelPartidasGanadas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelPartidasGanadas.AutoSize = true;
+            this.labelPartidasGanadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
             this.labelPartidasGanadas.Font = new System.Drawing.Font("Franklin Gothic Medium", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelPartidasGanadas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.labelPartidasGanadas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.labelPartidasGanadas.Location = new System.Drawing.Point(572, 156);
             this.labelPartidasGanadas.Margin = new System.Windows.Forms.Padding(10, 10, 3, 0);
             this.labelPartidasGanadas.Name = "labelPartidasGanadas";
@@ -84,8 +88,9 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             // 
             this.labelPartidasPerdidas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelPartidasPerdidas.AutoSize = true;
+            this.labelPartidasPerdidas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
             this.labelPartidasPerdidas.Font = new System.Drawing.Font("Franklin Gothic Medium", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelPartidasPerdidas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.labelPartidasPerdidas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.labelPartidasPerdidas.Location = new System.Drawing.Point(572, 203);
             this.labelPartidasPerdidas.Margin = new System.Windows.Forms.Padding(10, 10, 3, 0);
             this.labelPartidasPerdidas.Name = "labelPartidasPerdidas";
@@ -97,8 +102,9 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             // 
             this.labelPartidasJugadas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelPartidasJugadas.AutoSize = true;
+            this.labelPartidasJugadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
             this.labelPartidasJugadas.Font = new System.Drawing.Font("Franklin Gothic Medium", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelPartidasJugadas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.labelPartidasJugadas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.labelPartidasJugadas.Location = new System.Drawing.Point(572, 250);
             this.labelPartidasJugadas.Margin = new System.Windows.Forms.Padding(10, 10, 3, 0);
             this.labelPartidasJugadas.Name = "labelPartidasJugadas";
@@ -110,8 +116,9 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             // 
             this.labelWinRate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelWinRate.AutoSize = true;
+            this.labelWinRate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
             this.labelWinRate.Font = new System.Drawing.Font("Franklin Gothic Medium", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelWinRate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.labelWinRate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.labelWinRate.Location = new System.Drawing.Point(572, 297);
             this.labelWinRate.Margin = new System.Windows.Forms.Padding(10, 10, 3, 0);
             this.labelWinRate.Name = "labelWinRate";
@@ -171,12 +178,23 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.labelValorWinRate.TabIndex = 12;
             this.labelValorWinRate.Text = "0.";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.pictureBox4.Location = new System.Drawing.Point(39, 156);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(493, 10);
+            this.pictureBox4.TabIndex = 13;
+            this.pictureBox4.TabStop = false;
+            // 
             // FormIPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.ClientSize = new System.Drawing.Size(1116, 648);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.labelValorWinRate);
             this.Controls.Add(this.labelValorPartidasJugadas);
             this.Controls.Add(this.labelValorPartidasPerdidas);
@@ -192,6 +210,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.Text = "FormIPerfil";
             this.Load += new System.EventHandler(this.FormIPerfil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,5 +228,6 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
         private System.Windows.Forms.Label labelValorPartidasPerdidas;
         private System.Windows.Forms.Label labelValorPartidasJugadas;
         private System.Windows.Forms.Label labelValorWinRate;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

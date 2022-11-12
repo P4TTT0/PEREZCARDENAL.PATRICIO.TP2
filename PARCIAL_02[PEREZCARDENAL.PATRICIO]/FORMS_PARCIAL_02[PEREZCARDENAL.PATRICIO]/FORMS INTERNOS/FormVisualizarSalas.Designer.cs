@@ -92,6 +92,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.dataGridViewSalas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewSalas.Size = new System.Drawing.Size(1078, 489);
             this.dataGridViewSalas.TabIndex = 4;
+            this.dataGridViewSalas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSalas_CellClick);
             // 
             // buttonJugar
             // 
@@ -107,6 +108,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.buttonJugar.TabIndex = 13;
             this.buttonJugar.Text = "JUGAR";
             this.buttonJugar.UseVisualStyleBackColor = false;
+            this.buttonJugar.Click += new System.EventHandler(this.buttonJugar_Click);
             // 
             // FormVisualizarSalas
             // 
@@ -117,6 +119,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.Controls.Add(this.buttonJugar);
             this.Controls.Add(this.dataGridViewSalas);
             this.Controls.Add(this.labelCrearSala);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormVisualizarSalas";
             this.Text = "VISUALIZAR SALAS";
             this.Load += new System.EventHandler(this.FormVisualizarSalas_Load);

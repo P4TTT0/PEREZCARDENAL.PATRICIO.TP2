@@ -63,9 +63,39 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BASTO_PALO {
+            get {
+                object obj = ResourceManager.GetObject("BASTO_PALO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap COPA_PALO {
+            get {
+                object obj = ResourceManager.GetObject("COPA_PALO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ESPADA_LOGO_TRUCO {
             get {
                 object obj = ResourceManager.GetObject("ESPADA_LOGO-TRUCO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ESPADA_PALO {
+            get {
+                object obj = ResourceManager.GetObject("ESPADA_PALO", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,6 +153,16 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap MONEDA_PALO {
+            get {
+                object obj = ResourceManager.GetObject("MONEDA_PALO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap OJO_SHOWPASSWORD {
             get {
                 object obj = ResourceManager.GetObject("OJO_SHOWPASSWORD", resourceCulture);
@@ -156,6 +196,16 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.Properties {
         internal static System.Drawing.Bitmap OJO_SHOWPASSWORD3 {
             get {
                 object obj = ResourceManager.GetObject("OJO_SHOWPASSWORD3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ORO_PALO {
+            get {
+                object obj = ResourceManager.GetObject("ORO_PALO", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

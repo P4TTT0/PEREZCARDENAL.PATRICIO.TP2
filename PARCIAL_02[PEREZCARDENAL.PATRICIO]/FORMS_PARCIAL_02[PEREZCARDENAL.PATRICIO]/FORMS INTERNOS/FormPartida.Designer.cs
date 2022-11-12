@@ -35,9 +35,9 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.pictureBoxCarta1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.labelLogin = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxCartaJugadorUno = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxCartaJugadorDos = new System.Windows.Forms.PictureBox();
             this.buttonTruco = new System.Windows.Forms.Button();
             this.buttonEnvido = new System.Windows.Forms.Button();
             this.buttonRealEnvido = new System.Windows.Forms.Button();
@@ -48,23 +48,29 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.labelNumeroCarta1 = new System.Windows.Forms.Label();
             this.labelNumeroCarta2 = new System.Windows.Forms.Label();
             this.labelNumeroCarta3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelCartaJugadorUno = new System.Windows.Forms.Label();
+            this.labelCartaJugadorDos = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.labelTurnoJugador = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelNumeroRonda = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.labelPuntosJugadorUno = new System.Windows.Forms.Label();
+            this.labelPuntoJugadorDos = new System.Windows.Forms.Label();
+            this.labelNumeroSala = new System.Windows.Forms.Label();
+            this.pictureBoxTaparCartas = new System.Windows.Forms.PictureBox();
+            this.buttonAceptar = new System.Windows.Forms.Button();
+            this.labelCambioTurno = new System.Windows.Forms.Label();
+            this.labelMovimientoPartida = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCarta3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCarta2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCarta1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCartaJugadorUno)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCartaJugadorDos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTaparCartas)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxLogo
@@ -74,7 +80,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.pictureBoxLogo.Image = global::FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.Properties.Resources.ESPADA_LOGO_TRUCO;
             this.pictureBoxLogo.Location = new System.Drawing.Point(1061, 0);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(90, 677);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(90, 727);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxLogo.TabIndex = 1;
             this.pictureBoxLogo.TabStop = false;
@@ -82,29 +88,38 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             // pictureBoxCarta3
             // 
             this.pictureBoxCarta3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxCarta3.Location = new System.Drawing.Point(877, 353);
+            this.pictureBoxCarta3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.pictureBoxCarta3.Location = new System.Drawing.Point(877, 403);
             this.pictureBoxCarta3.Name = "pictureBoxCarta3";
             this.pictureBoxCarta3.Size = new System.Drawing.Size(178, 312);
+            this.pictureBoxCarta3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxCarta3.TabIndex = 2;
             this.pictureBoxCarta3.TabStop = false;
+            this.pictureBoxCarta3.DoubleClick += new System.EventHandler(this.pictureBoxCarta3_DoubleClick);
             // 
             // pictureBoxCarta2
             // 
             this.pictureBoxCarta2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxCarta2.Location = new System.Drawing.Point(693, 353);
+            this.pictureBoxCarta2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.pictureBoxCarta2.Location = new System.Drawing.Point(693, 403);
             this.pictureBoxCarta2.Name = "pictureBoxCarta2";
             this.pictureBoxCarta2.Size = new System.Drawing.Size(178, 312);
+            this.pictureBoxCarta2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxCarta2.TabIndex = 3;
             this.pictureBoxCarta2.TabStop = false;
+            this.pictureBoxCarta2.DoubleClick += new System.EventHandler(this.pictureBoxCarta2_DoubleClick);
             // 
             // pictureBoxCarta1
             // 
             this.pictureBoxCarta1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxCarta1.Location = new System.Drawing.Point(509, 353);
+            this.pictureBoxCarta1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.pictureBoxCarta1.Location = new System.Drawing.Point(509, 403);
             this.pictureBoxCarta1.Name = "pictureBoxCarta1";
             this.pictureBoxCarta1.Size = new System.Drawing.Size(178, 312);
+            this.pictureBoxCarta1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxCarta1.TabIndex = 4;
             this.pictureBoxCarta1.TabStop = false;
+            this.pictureBoxCarta1.DoubleClick += new System.EventHandler(this.pictureBoxCarta1_DoubleClick);
             // 
             // pictureBox4
             // 
@@ -130,13 +145,15 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.labelLogin.TabIndex = 6;
             this.labelLogin.Text = "JUGADOR 1:";
             // 
-            // pictureBox5
+            // pictureBoxCartaJugadorUno
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(241, 19);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(178, 312);
-            this.pictureBox5.TabIndex = 7;
-            this.pictureBox5.TabStop = false;
+            this.pictureBoxCartaJugadorUno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.pictureBoxCartaJugadorUno.Location = new System.Drawing.Point(241, 19);
+            this.pictureBoxCartaJugadorUno.Name = "pictureBoxCartaJugadorUno";
+            this.pictureBoxCartaJugadorUno.Size = new System.Drawing.Size(178, 312);
+            this.pictureBoxCartaJugadorUno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxCartaJugadorUno.TabIndex = 7;
+            this.pictureBoxCartaJugadorUno.TabStop = false;
             // 
             // label1
             // 
@@ -153,14 +170,16 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.label1.TabIndex = 8;
             this.label1.Text = "JUGADOR 2:";
             // 
-            // pictureBox6
+            // pictureBoxCartaJugadorDos
             // 
-            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox6.Location = new System.Drawing.Point(641, 19);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(178, 312);
-            this.pictureBox6.TabIndex = 9;
-            this.pictureBox6.TabStop = false;
+            this.pictureBoxCartaJugadorDos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxCartaJugadorDos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.pictureBoxCartaJugadorDos.Location = new System.Drawing.Point(641, 19);
+            this.pictureBoxCartaJugadorDos.Name = "pictureBoxCartaJugadorDos";
+            this.pictureBoxCartaJugadorDos.Size = new System.Drawing.Size(178, 312);
+            this.pictureBoxCartaJugadorDos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxCartaJugadorDos.TabIndex = 9;
+            this.pictureBoxCartaJugadorDos.TabStop = false;
             // 
             // buttonTruco
             // 
@@ -170,12 +189,13 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.buttonTruco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTruco.Font = new System.Drawing.Font("Franklin Gothic Medium", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonTruco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.buttonTruco.Location = new System.Drawing.Point(12, 541);
+            this.buttonTruco.Location = new System.Drawing.Point(12, 591);
             this.buttonTruco.Name = "buttonTruco";
             this.buttonTruco.Size = new System.Drawing.Size(491, 59);
             this.buttonTruco.TabIndex = 10;
             this.buttonTruco.Text = "TRUCO";
             this.buttonTruco.UseVisualStyleBackColor = false;
+            this.buttonTruco.Click += new System.EventHandler(this.buttonTruco_Click);
             // 
             // buttonEnvido
             // 
@@ -185,12 +205,13 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.buttonEnvido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEnvido.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonEnvido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.buttonEnvido.Location = new System.Drawing.Point(12, 476);
+            this.buttonEnvido.Location = new System.Drawing.Point(12, 526);
             this.buttonEnvido.Name = "buttonEnvido";
             this.buttonEnvido.Size = new System.Drawing.Size(160, 59);
             this.buttonEnvido.TabIndex = 11;
             this.buttonEnvido.Text = "ENVIDO";
             this.buttonEnvido.UseVisualStyleBackColor = false;
+            this.buttonEnvido.Click += new System.EventHandler(this.buttonEnvido_Click);
             // 
             // buttonRealEnvido
             // 
@@ -200,12 +221,13 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.buttonRealEnvido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRealEnvido.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonRealEnvido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.buttonRealEnvido.Location = new System.Drawing.Point(178, 476);
+            this.buttonRealEnvido.Location = new System.Drawing.Point(178, 526);
             this.buttonRealEnvido.Name = "buttonRealEnvido";
             this.buttonRealEnvido.Size = new System.Drawing.Size(160, 59);
             this.buttonRealEnvido.TabIndex = 12;
             this.buttonRealEnvido.Text = "REAL ENVIDO";
             this.buttonRealEnvido.UseVisualStyleBackColor = false;
+            this.buttonRealEnvido.Click += new System.EventHandler(this.buttonRealEnvido_Click);
             // 
             // buttonFaltaEnvido
             // 
@@ -215,12 +237,13 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.buttonFaltaEnvido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonFaltaEnvido.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonFaltaEnvido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.buttonFaltaEnvido.Location = new System.Drawing.Point(344, 476);
+            this.buttonFaltaEnvido.Location = new System.Drawing.Point(344, 526);
             this.buttonFaltaEnvido.Name = "buttonFaltaEnvido";
             this.buttonFaltaEnvido.Size = new System.Drawing.Size(159, 59);
             this.buttonFaltaEnvido.TabIndex = 13;
             this.buttonFaltaEnvido.Text = "FALTA ENVIDO";
             this.buttonFaltaEnvido.UseVisualStyleBackColor = false;
+            this.buttonFaltaEnvido.Click += new System.EventHandler(this.buttonFaltaEnvido_Click);
             // 
             // buttonMazo
             // 
@@ -230,12 +253,13 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.buttonMazo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMazo.Font = new System.Drawing.Font("Franklin Gothic Medium", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonMazo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.buttonMazo.Location = new System.Drawing.Point(12, 606);
+            this.buttonMazo.Location = new System.Drawing.Point(12, 656);
             this.buttonMazo.Name = "buttonMazo";
             this.buttonMazo.Size = new System.Drawing.Size(491, 59);
             this.buttonMazo.TabIndex = 14;
             this.buttonMazo.Text = "MAZO";
             this.buttonMazo.UseVisualStyleBackColor = false;
+            this.buttonMazo.Click += new System.EventHandler(this.buttonMazo_Click);
             // 
             // buttonQuiero
             // 
@@ -245,12 +269,14 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.buttonQuiero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonQuiero.Font = new System.Drawing.Font("Franklin Gothic Medium", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonQuiero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.buttonQuiero.Location = new System.Drawing.Point(12, 353);
+            this.buttonQuiero.Location = new System.Drawing.Point(12, 403);
             this.buttonQuiero.Name = "buttonQuiero";
             this.buttonQuiero.Size = new System.Drawing.Size(243, 117);
             this.buttonQuiero.TabIndex = 15;
             this.buttonQuiero.Text = "QUIERO";
             this.buttonQuiero.UseVisualStyleBackColor = false;
+            this.buttonQuiero.Visible = false;
+            this.buttonQuiero.Click += new System.EventHandler(this.buttonQuiero_Click);
             // 
             // buttonNoQuiero
             // 
@@ -260,12 +286,14 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.buttonNoQuiero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonNoQuiero.Font = new System.Drawing.Font("Franklin Gothic Medium", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonNoQuiero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.buttonNoQuiero.Location = new System.Drawing.Point(263, 353);
+            this.buttonNoQuiero.Location = new System.Drawing.Point(263, 403);
             this.buttonNoQuiero.Name = "buttonNoQuiero";
             this.buttonNoQuiero.Size = new System.Drawing.Size(240, 117);
             this.buttonNoQuiero.TabIndex = 16;
             this.buttonNoQuiero.Text = "NO QUIERO";
             this.buttonNoQuiero.UseVisualStyleBackColor = false;
+            this.buttonNoQuiero.Visible = false;
+            this.buttonNoQuiero.Click += new System.EventHandler(this.buttonNoQuiero_Click);
             // 
             // labelNumeroCarta1
             // 
@@ -274,7 +302,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.labelNumeroCarta1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
             this.labelNumeroCarta1.Font = new System.Drawing.Font("Franklin Gothic Medium", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelNumeroCarta1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.labelNumeroCarta1.Location = new System.Drawing.Point(519, 360);
+            this.labelNumeroCarta1.Location = new System.Drawing.Point(519, 410);
             this.labelNumeroCarta1.Margin = new System.Windows.Forms.Padding(10, 10, 3, 0);
             this.labelNumeroCarta1.Name = "labelNumeroCarta1";
             this.labelNumeroCarta1.Size = new System.Drawing.Size(42, 43);
@@ -288,7 +316,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.labelNumeroCarta2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
             this.labelNumeroCarta2.Font = new System.Drawing.Font("Franklin Gothic Medium", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelNumeroCarta2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.labelNumeroCarta2.Location = new System.Drawing.Point(700, 360);
+            this.labelNumeroCarta2.Location = new System.Drawing.Point(700, 410);
             this.labelNumeroCarta2.Margin = new System.Windows.Forms.Padding(10, 10, 3, 0);
             this.labelNumeroCarta2.Name = "labelNumeroCarta2";
             this.labelNumeroCarta2.Size = new System.Drawing.Size(42, 43);
@@ -302,44 +330,46 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.labelNumeroCarta3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
             this.labelNumeroCarta3.Font = new System.Drawing.Font("Franklin Gothic Medium", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelNumeroCarta3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.labelNumeroCarta3.Location = new System.Drawing.Point(884, 360);
+            this.labelNumeroCarta3.Location = new System.Drawing.Point(884, 410);
             this.labelNumeroCarta3.Margin = new System.Windows.Forms.Padding(10, 10, 3, 0);
             this.labelNumeroCarta3.Name = "labelNumeroCarta3";
             this.labelNumeroCarta3.Size = new System.Drawing.Size(42, 43);
             this.labelNumeroCarta3.TabIndex = 19;
             this.labelNumeroCarta3.Text = "1";
             // 
-            // label5
+            // labelCartaJugadorUno
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
-            this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.label5.Location = new System.Drawing.Point(245, 19);
-            this.label5.Margin = new System.Windows.Forms.Padding(10, 10, 3, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 43);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "1";
+            this.labelCartaJugadorUno.AutoSize = true;
+            this.labelCartaJugadorUno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.labelCartaJugadorUno.Font = new System.Drawing.Font("Franklin Gothic Medium", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelCartaJugadorUno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.labelCartaJugadorUno.Location = new System.Drawing.Point(245, 19);
+            this.labelCartaJugadorUno.Margin = new System.Windows.Forms.Padding(10, 10, 3, 0);
+            this.labelCartaJugadorUno.Name = "labelCartaJugadorUno";
+            this.labelCartaJugadorUno.Size = new System.Drawing.Size(42, 43);
+            this.labelCartaJugadorUno.TabIndex = 20;
+            this.labelCartaJugadorUno.Text = "1";
+            this.labelCartaJugadorUno.Visible = false;
             // 
-            // label6
+            // labelCartaJugadorDos
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
-            this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.label6.Location = new System.Drawing.Point(645, 19);
-            this.label6.Margin = new System.Windows.Forms.Padding(10, 10, 3, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 43);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "1";
+            this.labelCartaJugadorDos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelCartaJugadorDos.AutoSize = true;
+            this.labelCartaJugadorDos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.labelCartaJugadorDos.Font = new System.Drawing.Font("Franklin Gothic Medium", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelCartaJugadorDos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.labelCartaJugadorDos.Location = new System.Drawing.Point(645, 19);
+            this.labelCartaJugadorDos.Margin = new System.Windows.Forms.Padding(10, 10, 3, 0);
+            this.labelCartaJugadorDos.Name = "labelCartaJugadorDos";
+            this.labelCartaJugadorDos.Size = new System.Drawing.Size(42, 43);
+            this.labelCartaJugadorDos.TabIndex = 21;
+            this.labelCartaJugadorDos.Text = "1";
+            this.labelCartaJugadorDos.Visible = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(159)))), ((int)(((byte)(147)))));
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.label2.Location = new System.Drawing.Point(12, 253);
@@ -352,7 +382,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             // labelTurnoJugador
             // 
             this.labelTurnoJugador.AutoSize = true;
-            this.labelTurnoJugador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.labelTurnoJugador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(159)))), ((int)(((byte)(147)))));
             this.labelTurnoJugador.Font = new System.Drawing.Font("Franklin Gothic Medium", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelTurnoJugador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.labelTurnoJugador.Location = new System.Drawing.Point(12, 297);
@@ -360,7 +390,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.labelTurnoJugador.Name = "labelTurnoJugador";
             this.labelTurnoJugador.Size = new System.Drawing.Size(166, 34);
             this.labelTurnoJugador.TabIndex = 23;
-            this.labelTurnoJugador.Text = "JUGADOR 1.";
+            this.labelTurnoJugador.Text = "JUGADOR: 1";
             // 
             // label3
             // 
@@ -377,20 +407,20 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.label3.TabIndex = 24;
             this.label3.Text = "RONDA:";
             // 
-            // label4
+            // labelNumeroRonda
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
-            this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.label4.Location = new System.Drawing.Point(832, 297);
-            this.label4.Margin = new System.Windows.Forms.Padding(10, 10, 3, 0);
-            this.label4.Name = "label4";
-            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label4.Size = new System.Drawing.Size(40, 34);
-            this.label4.TabIndex = 25;
-            this.label4.Text = "1.";
+            this.labelNumeroRonda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelNumeroRonda.AutoSize = true;
+            this.labelNumeroRonda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.labelNumeroRonda.Font = new System.Drawing.Font("Franklin Gothic Medium", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelNumeroRonda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.labelNumeroRonda.Location = new System.Drawing.Point(832, 297);
+            this.labelNumeroRonda.Margin = new System.Windows.Forms.Padding(10, 10, 3, 0);
+            this.labelNumeroRonda.Name = "labelNumeroRonda";
+            this.labelNumeroRonda.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelNumeroRonda.Size = new System.Drawing.Size(32, 34);
+            this.labelNumeroRonda.TabIndex = 25;
+            this.labelNumeroRonda.Text = "1";
             // 
             // label7
             // 
@@ -419,51 +449,122 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.label8.TabIndex = 27;
             this.label8.Text = "PUNTOS:";
             // 
-            // label9
+            // labelPuntosJugadorUno
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.label9.Font = new System.Drawing.Font("Franklin Gothic Medium", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
-            this.label9.Location = new System.Drawing.Point(149, 72);
-            this.label9.Margin = new System.Windows.Forms.Padding(10, 10, 3, 0);
-            this.label9.Name = "label9";
-            this.label9.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label9.Size = new System.Drawing.Size(40, 34);
-            this.label9.TabIndex = 28;
-            this.label9.Text = "0.";
+            this.labelPuntosJugadorUno.AutoSize = true;
+            this.labelPuntosJugadorUno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.labelPuntosJugadorUno.Font = new System.Drawing.Font("Franklin Gothic Medium", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelPuntosJugadorUno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.labelPuntosJugadorUno.Location = new System.Drawing.Point(149, 72);
+            this.labelPuntosJugadorUno.Margin = new System.Windows.Forms.Padding(10, 10, 3, 0);
+            this.labelPuntosJugadorUno.Name = "labelPuntosJugadorUno";
+            this.labelPuntosJugadorUno.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelPuntosJugadorUno.Size = new System.Drawing.Size(40, 34);
+            this.labelPuntosJugadorUno.TabIndex = 28;
+            this.labelPuntosJugadorUno.Text = "0.";
             // 
-            // label10
+            // labelPuntoJugadorDos
             // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.label10.Font = new System.Drawing.Font("Franklin Gothic Medium", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
-            this.label10.Location = new System.Drawing.Point(969, 72);
-            this.label10.Margin = new System.Windows.Forms.Padding(10, 10, 3, 0);
-            this.label10.Name = "label10";
-            this.label10.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label10.Size = new System.Drawing.Size(40, 34);
-            this.label10.TabIndex = 29;
-            this.label10.Text = "0.";
+            this.labelPuntoJugadorDos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPuntoJugadorDos.AutoSize = true;
+            this.labelPuntoJugadorDos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.labelPuntoJugadorDos.Font = new System.Drawing.Font("Franklin Gothic Medium", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelPuntoJugadorDos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.labelPuntoJugadorDos.Location = new System.Drawing.Point(969, 72);
+            this.labelPuntoJugadorDos.Margin = new System.Windows.Forms.Padding(10, 10, 3, 0);
+            this.labelPuntoJugadorDos.Name = "labelPuntoJugadorDos";
+            this.labelPuntoJugadorDos.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelPuntoJugadorDos.Size = new System.Drawing.Size(40, 34);
+            this.labelPuntoJugadorDos.TabIndex = 29;
+            this.labelPuntoJugadorDos.Text = "0.";
+            // 
+            // labelNumeroSala
+            // 
+            this.labelNumeroSala.AutoSize = true;
+            this.labelNumeroSala.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.labelNumeroSala.Font = new System.Drawing.Font("Franklin Gothic Medium", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelNumeroSala.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.labelNumeroSala.Location = new System.Drawing.Point(12, 200);
+            this.labelNumeroSala.Margin = new System.Windows.Forms.Padding(10, 10, 3, 0);
+            this.labelNumeroSala.Name = "labelNumeroSala";
+            this.labelNumeroSala.Size = new System.Drawing.Size(149, 43);
+            this.labelNumeroSala.TabIndex = 30;
+            this.labelNumeroSala.Text = "SALA 0.";
+            // 
+            // pictureBoxTaparCartas
+            // 
+            this.pictureBoxTaparCartas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxTaparCartas.Location = new System.Drawing.Point(509, 403);
+            this.pictureBoxTaparCartas.Name = "pictureBoxTaparCartas";
+            this.pictureBoxTaparCartas.Size = new System.Drawing.Size(546, 312);
+            this.pictureBoxTaparCartas.TabIndex = 31;
+            this.pictureBoxTaparCartas.TabStop = false;
+            // 
+            // buttonAceptar
+            // 
+            this.buttonAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.buttonAceptar.FlatAppearance.BorderSize = 0;
+            this.buttonAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAceptar.Font = new System.Drawing.Font("Franklin Gothic Medium", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonAceptar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.buttonAceptar.Location = new System.Drawing.Point(825, 657);
+            this.buttonAceptar.Name = "buttonAceptar";
+            this.buttonAceptar.Size = new System.Drawing.Size(220, 50);
+            this.buttonAceptar.TabIndex = 32;
+            this.buttonAceptar.Text = "ACEPTAR";
+            this.buttonAceptar.UseVisualStyleBackColor = false;
+            this.buttonAceptar.Click += new System.EventHandler(this.buttonAceptar_Click);
+            // 
+            // labelCambioTurno
+            // 
+            this.labelCambioTurno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelCambioTurno.AutoSize = true;
+            this.labelCambioTurno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.labelCambioTurno.Font = new System.Drawing.Font("Franklin Gothic Medium", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelCambioTurno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.labelCambioTurno.Location = new System.Drawing.Point(521, 419);
+            this.labelCambioTurno.Margin = new System.Windows.Forms.Padding(10, 10, 3, 0);
+            this.labelCambioTurno.Name = "labelCambioTurno";
+            this.labelCambioTurno.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelCambioTurno.Size = new System.Drawing.Size(417, 34);
+            this.labelCambioTurno.TabIndex = 33;
+            this.labelCambioTurno.Text = "¡Cambio de turno a JUGADOR 1!";
+            // 
+            // labelMovimientoPartida
+            // 
+            this.labelMovimientoPartida.AutoSize = true;
+            this.labelMovimientoPartida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.labelMovimientoPartida.Font = new System.Drawing.Font("Franklin Gothic Medium", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelMovimientoPartida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.labelMovimientoPartida.Location = new System.Drawing.Point(12, 360);
+            this.labelMovimientoPartida.Margin = new System.Windows.Forms.Padding(10, 10, 3, 0);
+            this.labelMovimientoPartida.Name = "labelMovimientoPartida";
+            this.labelMovimientoPartida.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelMovimientoPartida.Size = new System.Drawing.Size(0, 34);
+            this.labelMovimientoPartida.TabIndex = 34;
             // 
             // FormPartida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.ClientSize = new System.Drawing.Size(1151, 677);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
+            this.ClientSize = new System.Drawing.Size(1151, 727);
+            this.Controls.Add(this.labelMovimientoPartida);
+            this.Controls.Add(this.labelCambioTurno);
+            this.Controls.Add(this.buttonAceptar);
+            this.Controls.Add(this.pictureBoxTaparCartas);
+            this.Controls.Add(this.labelNumeroSala);
+            this.Controls.Add(this.labelPuntoJugadorDos);
+            this.Controls.Add(this.labelPuntosJugadorUno);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.labelNumeroRonda);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.labelTurnoJugador);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.labelCartaJugadorDos);
+            this.Controls.Add(this.labelCartaJugadorUno);
             this.Controls.Add(this.labelNumeroCarta3);
             this.Controls.Add(this.labelNumeroCarta2);
             this.Controls.Add(this.labelNumeroCarta1);
@@ -474,25 +575,27 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.Controls.Add(this.buttonRealEnvido);
             this.Controls.Add(this.buttonEnvido);
             this.Controls.Add(this.buttonTruco);
-            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBoxCartaJugadorDos);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBoxCartaJugadorUno);
             this.Controls.Add(this.labelLogin);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBoxCarta1);
             this.Controls.Add(this.pictureBoxCarta2);
             this.Controls.Add(this.pictureBoxCarta3);
             this.Controls.Add(this.pictureBoxLogo);
-            this.MinimumSize = new System.Drawing.Size(1167, 716);
+            this.MinimumSize = new System.Drawing.Size(1167, 766);
             this.Name = "FormPartida";
             this.Text = "PARTIDA";
+            this.Load += new System.EventHandler(this.FormPartida_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCarta3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCarta2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCarta1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCartaJugadorUno)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCartaJugadorDos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTaparCartas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -506,9 +609,9 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
         private System.Windows.Forms.PictureBox pictureBoxCarta1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label labelLogin;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBoxCartaJugadorUno;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBoxCartaJugadorDos;
         private System.Windows.Forms.Button buttonTruco;
         private System.Windows.Forms.Button buttonEnvido;
         private System.Windows.Forms.Button buttonRealEnvido;
@@ -519,15 +622,20 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
         private System.Windows.Forms.Label labelNumeroCarta1;
         private System.Windows.Forms.Label labelNumeroCarta2;
         private System.Windows.Forms.Label labelNumeroCarta3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelCartaJugadorUno;
+        private System.Windows.Forms.Label labelCartaJugadorDos;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelTurnoJugador;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelNumeroRonda;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label labelPuntosJugadorUno;
+        private System.Windows.Forms.Label labelPuntoJugadorDos;
+        private System.Windows.Forms.Label labelNumeroSala;
+        private System.Windows.Forms.PictureBox pictureBoxTaparCartas;
+        private System.Windows.Forms.Button buttonAceptar;
+        private System.Windows.Forms.Label labelCambioTurno;
+        private System.Windows.Forms.Label labelMovimientoPartida;
     }
 }

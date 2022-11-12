@@ -46,16 +46,19 @@ namespace BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_
         {
             List<Carta> listaCartas = new List<Carta>();
             Carta auxCarta;
+            string json;
 
             try
             {
                 using(JSON.reader = new StreamReader(JSON.path))
                 {
-                    string json = JSON.reader.ReadToEnd();
+                    while((json = JSON.reader.ReadLine()) is not null)
+                    {
+                        auxCarta = JsonSerializer.Deserialize<Carta>(json);
 
-                    auxCarta = JsonSerializer.Deserialize<Carta>(json);
+                        listaCartas.Add(auxCarta);
+                    }
 
-                    listaCartas.Add(auxCarta);
                 }
             }
             catch (Exception e)

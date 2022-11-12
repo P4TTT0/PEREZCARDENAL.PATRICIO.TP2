@@ -42,7 +42,17 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
 
         private void buttonJugar_Click(object sender, EventArgs e)
         {
+            this.AbrirFormInterno(new FORMS_INTERNOS.FormVisualizarSalas());
+        }
+
+        private void buttonCrearSala_Click(object sender, EventArgs e)
+        {
             this.AbrirFormInterno(new FORMS_INTERNOS.FormJugar());
+        }
+
+        private void buttonInicio_Click(object sender, EventArgs e)
+        {
+            this.AbrirFormInterno(new FORMS_INTERNOS.FormIPerfil());
         }
     }
 }

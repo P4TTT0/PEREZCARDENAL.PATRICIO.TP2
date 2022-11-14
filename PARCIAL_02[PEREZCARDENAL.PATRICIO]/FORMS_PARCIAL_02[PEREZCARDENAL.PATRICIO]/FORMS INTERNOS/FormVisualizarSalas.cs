@@ -15,32 +15,52 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
     {
         DataTable tablaSalas;
         DataRow filaSala;
-        ConexionBaseDatos baseDatos = new ConexionBaseDatos();
         Salas auxSala;
-        FormMenuPrincipal menu;
+
+        private ConexionSalas conexionSalas;
         public FormVisualizarSalas()
         {
             InitializeComponent();
-        }
-
-        public FormVisualizarSalas(FormMenuPrincipal formMenu) : this()
-        {
-            InitializeComponent();
-            this.menu = formMenu;
+            this.auxSala = new Salas();
+            this.conexionSalas = new ConexionSalas();
+            this.auxSala = new Salas();
         }
 
         private void FormVisualizarSalas_Load(object sender, EventArgs e)
         {
             this.CargarColumnas();
             this.CargarDataGridSalas();
+            this.buttonJugar.Enabled = false;
         }
 
         private void CargarDataGridSalas()
         {
             this.tablaSalas.Dispose();
+            this.tablaSalas.Clear();
             this.CargarColumnas();
 
-            List<Salas> listaSalas = this.baseDatos.ObtenerListaSalas();
+            List<Salas> listaSalas = this.conexionSalas.ObtenerLista();
+
+            foreach (Salas sala in listaSalas)
+            {
+                this.filaSala = this.tablaSalas.NewRow();
+                this.filaSala[0] = sala.Id;
+                this.filaSala[1] = sala.NombreCreador;
+                this.filaSala[2] = sala.FechaSalaCreada;
+                this.filaSala[3] = sala.EstadoPartida;
+                this.filaSala[4] = sala.Ronda;
+                this.tablaSalas.Rows.Add(filaSala);
+            }
+            this.DataGridHilo();
+        }
+
+        private void CargarDataGridSalasFiltrado()
+        {
+            this.tablaSalas.Dispose();
+            this.tablaSalas.Clear();
+            this.CargarColumnas();
+
+            List<Salas> listaSalas = this.conexionSalas.ObtenerLista();
 
             foreach (Salas sala in listaSalas)
             {
@@ -71,6 +91,19 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
                 this.dataGridViewSalas.DataSource = this.tablaSalas;
             }
         }
+        private void ButtonJugarHilo()
+        {
+            if (this.buttonJugar.InvokeRequired)
+            {
+                Action delegado = new Action(this.ButtonJugarHilo);
+
+                this.buttonJugar.Invoke(delegado);
+            }
+            else
+            {
+                this.buttonJugar.Enabled = false;
+            }
+        }
 
         private void CargarColumnas()
         {
@@ -85,14 +118,23 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
         private Salas SeleccionarSala(int indiceFilaSeleccionada)
         {
             Salas auxSala = null;
-            foreach (Salas sala in this.baseDatos.ObtenerListaSalas())
+            foreach (Salas sala in this.conexionSalas.ObtenerLista())
             {
                 if (indiceFilaSeleccionada > -1)
                 {
                     if (sala == int.Parse(this.dataGridViewSalas.Rows[indiceFilaSeleccionada].Cells[0].Value.ToString()))
                     {
-                        auxSala = sala;
-                        break;
+                        if (sala.EstadoPartida == EEstadoPartida.TERMINADA.ToString())
+                        {
+                            this.buttonJugar.Enabled = false;
+                            break;
+                        }
+                        else
+                        {
+                            auxSala = sala;
+                            this.buttonJugar.Enabled = true;
+                            break;
+                        }
                     }
                 } 
             }
@@ -120,8 +162,18 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             FormPartida formPartida = new FormPartida(sala);
             if (formPartida.ShowDialog() == DialogResult.OK)
             {
-                this.CargarDataGridSalas();
+                this.ButtonJugarHilo();
             }
+        }
+
+        private void buttonVerEnJuego_Click(object sender, EventArgs e)
+        {
+            this.CargarDataGridSalasFiltrado();
+        }
+
+        private void buttonVerTodas_Click(object sender, EventArgs e)
+        {
+            this.CargarDataGridSalas();
         }
     }
 }

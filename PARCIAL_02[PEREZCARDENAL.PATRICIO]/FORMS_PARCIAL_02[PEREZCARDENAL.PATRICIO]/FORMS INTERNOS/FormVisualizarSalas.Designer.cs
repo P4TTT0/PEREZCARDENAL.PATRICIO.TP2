@@ -34,6 +34,9 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.labelCrearSala = new System.Windows.Forms.Label();
             this.dataGridViewSalas = new System.Windows.Forms.DataGridView();
             this.buttonJugar = new System.Windows.Forms.Button();
+            this.buttonVerTodas = new System.Windows.Forms.Button();
+            this.buttonVerEnJuego = new System.Windows.Forms.Button();
+            this.buttonVerHistorial = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSalas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,7 +78,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.dataGridViewSalas.ColumnHeadersHeight = 30;
             this.dataGridViewSalas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewSalas.EnableHeadersVisualStyles = false;
-            this.dataGridViewSalas.Location = new System.Drawing.Point(19, 72);
+            this.dataGridViewSalas.Location = new System.Drawing.Point(20, 72);
             this.dataGridViewSalas.Margin = new System.Windows.Forms.Padding(10);
             this.dataGridViewSalas.Name = "dataGridViewSalas";
             this.dataGridViewSalas.ReadOnly = true;
@@ -110,12 +113,62 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.buttonJugar.UseVisualStyleBackColor = false;
             this.buttonJugar.Click += new System.EventHandler(this.buttonJugar_Click);
             // 
+            // buttonVerTodas
+            // 
+            this.buttonVerTodas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonVerTodas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.buttonVerTodas.FlatAppearance.BorderSize = 0;
+            this.buttonVerTodas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonVerTodas.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonVerTodas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.buttonVerTodas.Location = new System.Drawing.Point(19, 574);
+            this.buttonVerTodas.Name = "buttonVerTodas";
+            this.buttonVerTodas.Size = new System.Drawing.Size(202, 62);
+            this.buttonVerTodas.TabIndex = 14;
+            this.buttonVerTodas.Text = "VER TODAS";
+            this.buttonVerTodas.UseVisualStyleBackColor = false;
+            this.buttonVerTodas.Click += new System.EventHandler(this.buttonVerTodas_Click);
+            // 
+            // buttonVerEnJuego
+            // 
+            this.buttonVerEnJuego.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonVerEnJuego.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.buttonVerEnJuego.FlatAppearance.BorderSize = 0;
+            this.buttonVerEnJuego.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonVerEnJuego.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonVerEnJuego.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.buttonVerEnJuego.Location = new System.Drawing.Point(227, 574);
+            this.buttonVerEnJuego.Name = "buttonVerEnJuego";
+            this.buttonVerEnJuego.Size = new System.Drawing.Size(202, 62);
+            this.buttonVerEnJuego.TabIndex = 15;
+            this.buttonVerEnJuego.Text = "VER EN JUEGO";
+            this.buttonVerEnJuego.UseVisualStyleBackColor = false;
+            this.buttonVerEnJuego.Click += new System.EventHandler(this.buttonVerEnJuego_Click);
+            // 
+            // buttonVerHistorial
+            // 
+            this.buttonVerHistorial.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonVerHistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.buttonVerHistorial.FlatAppearance.BorderSize = 0;
+            this.buttonVerHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonVerHistorial.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonVerHistorial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.buttonVerHistorial.Location = new System.Drawing.Point(435, 574);
+            this.buttonVerHistorial.Name = "buttonVerHistorial";
+            this.buttonVerHistorial.Size = new System.Drawing.Size(202, 62);
+            this.buttonVerHistorial.TabIndex = 16;
+            this.buttonVerHistorial.Text = "VER HISTORIAL";
+            this.buttonVerHistorial.UseVisualStyleBackColor = false;
+            // 
             // FormVisualizarSalas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.ClientSize = new System.Drawing.Size(1116, 648);
+            this.Controls.Add(this.buttonVerHistorial);
+            this.Controls.Add(this.buttonVerEnJuego);
+            this.Controls.Add(this.buttonVerTodas);
             this.Controls.Add(this.buttonJugar);
             this.Controls.Add(this.dataGridViewSalas);
             this.Controls.Add(this.labelCrearSala);
@@ -134,5 +187,8 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
         private System.Windows.Forms.Label labelCrearSala;
         private System.Windows.Forms.DataGridView dataGridViewSalas;
         private System.Windows.Forms.Button buttonJugar;
+        private System.Windows.Forms.Button buttonVerTodas;
+        private System.Windows.Forms.Button buttonVerEnJuego;
+        private System.Windows.Forms.Button buttonVerHistorial;
     }
 }

@@ -14,16 +14,19 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
 {
     public partial class FormLogin : Form
     {
+        private static Usuario usuarioActual;
+        private ConexionEstadisticasUsuario conexionEstadisticasUsuario;
+        private ConexionUsuario conexionUsuario;
+
+        public static Usuario UsuarioActual { get => usuarioActual; set => usuarioActual = value; }
+
         public FormLogin()
         {
             InitializeComponent();
+            this.conexionUsuario = new ConexionUsuario();
+            this.conexionEstadisticasUsuario = new ConexionEstadisticasUsuario();
         }
 
-        private static Usuario usuarioActual;
-
-        private ConexionBaseDatos baseDatos = new ConexionBaseDatos();
-
-        public static Usuario UsuarioActual { get => usuarioActual; set => usuarioActual = value; }
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
@@ -45,9 +48,9 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
         private void buttonJugar_Click(object sender, EventArgs e)
         {
             Usuario usuarioActual = new Usuario(this.textBoxUsuario.Text, this.textBoxContraseña.Text);
-            if(this.baseDatos.ComprobarUsuario(usuarioActual))
+            if(this.conexionUsuario.ComprobarUsuario(usuarioActual))
             {
-                usuarioActual.Id = this.baseDatos.RetornarIdUsuario(usuarioActual);
+                usuarioActual.Id = this.conexionUsuario.RetornarIdUsuario(usuarioActual);
                 FormMenuPrincipal formMenu = new FormMenuPrincipal();
                 FormLogin.usuarioActual = usuarioActual;
                 formMenu.Show();
@@ -65,7 +68,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
 
             if (formRegistrar.ShowDialog() == DialogResult.OK)
             {
-                if (this.baseDatos.AgregarUsuario(formRegistrar.NuevoUsuario) && this.baseDatos.AgregarEstadisticasUsuario(formRegistrar.NuevoUsuario))
+                if (this.conexionUsuario.Agregar(formRegistrar.NuevoUsuario) && this.conexionEstadisticasUsuario.AgregarEstadisticasUsuario(formRegistrar.NuevoUsuario))
                 {
                     this.ActualizarMensajeInformativo(2);
                 }
@@ -107,5 +110,6 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
         {
             this.ActualizarMensajeInformativo();
         }
+
     }
 }

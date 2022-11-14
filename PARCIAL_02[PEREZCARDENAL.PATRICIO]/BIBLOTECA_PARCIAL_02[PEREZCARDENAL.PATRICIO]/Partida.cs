@@ -118,7 +118,7 @@ namespace BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_
             return envido;
         }
 
-        private int CalcularPosibleEnvido(Carta cartaUno, Carta cartaDos)
+        public int CalcularPosibleEnvido(Carta cartaUno, Carta cartaDos)
         {
             int envido = 0;
             if (cartaUno == cartaDos)

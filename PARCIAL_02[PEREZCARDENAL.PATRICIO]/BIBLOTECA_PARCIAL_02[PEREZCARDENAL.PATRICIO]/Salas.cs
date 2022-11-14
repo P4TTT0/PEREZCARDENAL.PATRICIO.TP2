@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_
+namespace BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_ 
 {
     public class Salas
     {
@@ -24,7 +26,10 @@ namespace BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_
         public int Ronda { get => ronda; set => ronda = value; }
         #endregion
 
-        #region--METODOS--
+        #region--CONSTRUCTORES--
+        #endregion
+
+        #region--METODOS--  
         public static bool operator ==(Salas salaUno, int id)
         {
             bool validacion = false;

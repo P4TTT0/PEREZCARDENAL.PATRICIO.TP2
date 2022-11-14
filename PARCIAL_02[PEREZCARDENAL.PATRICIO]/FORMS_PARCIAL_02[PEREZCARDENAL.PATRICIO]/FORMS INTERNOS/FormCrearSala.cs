@@ -13,12 +13,13 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
 {
     public partial class FormCrearSala : Form
     {
+        private ConexionSalas conexionSalas;
         public FormCrearSala()
         {
             InitializeComponent();
+            this.conexionSalas = new ConexionSalas();
         }
    
-        ConexionBaseDatos baseDatos = new ConexionBaseDatos();
 
         private void FormCrearSala_Load(object sender, EventArgs e)
         {
@@ -29,7 +30,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
         {
             if (this.comboBoxCantidadJugadores.SelectedIndex > -1)
             {
-                this.baseDatos.AgregarSala(FormLogin.UsuarioActual, (int)this.comboBoxCantidadJugadores.SelectedItem);
+                this.conexionSalas.AgregarSala(FormLogin.UsuarioActual, (int)this.comboBoxCantidadJugadores.SelectedItem);
                 this.DialogResult = DialogResult.OK;
             }
             else

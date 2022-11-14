@@ -54,5 +54,10 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
         {
             this.AbrirFormInterno(new FORMS_INTERNOS.FormIPerfil());
         }
+
+        private void buttonEstadisticas_Click(object sender, EventArgs e)
+        {
+            this.AbrirFormInterno(new FORMS_INTERNOS.FormVisualizarUsuarios());
+        }
     }
 }

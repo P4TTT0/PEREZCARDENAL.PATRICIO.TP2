@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Text;
 
 namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
 {
@@ -15,8 +16,13 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
         private Carta cartaTiradaJugadorDos;
         private delegate bool DelegadoQuieroEnvido(object sender, EventArgs e);
         private event DelegadoQuieroEnvido quieroEnvido;
-        bool banderaQuienCanto;
-        ConexionBaseDatos baseDatos;
+        private bool banderaQuienCanto;
+
+        private StringBuilder historialPartida;
+        private EstadisticasUsuario estadisticasUsuario;
+
+        private ConexionSalas conexionSalas;
+        private ConexionEstadisticasUsuario conexionEstadisticasUsuario;
         public FormPartida()
         {
             InitializeComponent();
@@ -26,12 +32,16 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
         {
             this.sala = sala;
             this.partida = new Partida();
+            this.historialPartida = new StringBuilder();
+            this.conexionEstadisticasUsuario = new ConexionEstadisticasUsuario();
+            this.conexionSalas = new ConexionSalas();
+            this.estadisticasUsuario = new EstadisticasUsuario();
             this.quieroEnvido += this.EventoQuieroEnvido;
-            baseDatos = new ConexionBaseDatos();
         }
 
         private void FormPartida_Load(object sender, EventArgs e)
         {
+
             this.mazo = JSON.DeserializarJSON();
             this.partida.Ronda = 1;
             this.partida.Turno = 1;
@@ -40,6 +50,8 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.partida.PuntosNoQuieroTruco = 1;
             this.CambiarRonda();
             this.labelNumeroSala.Text = $"SALA {this.sala.Id}";
+
+            this.estadisticasUsuario = this.conexionEstadisticasUsuario.ObtenerEstadisticasUsuario(FormLogin.UsuarioActual.Id);
         }
 
         private void MostrarCartas(List<Carta> mazo)
@@ -95,6 +107,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             if (this.partida.Turno == 1)
             {
                 this.labelMovimientoPartida.Text = $"Jugador 1 lanzo la carta: {this.partida.JugadorUno.Mazo[0].Numero} de {this.partida.JugadorUno.Mazo[0].Palo}";
+                this.historialPartida.AppendLine(this.labelMovimientoPartida.Text);
                 this.partida.JugadorUno.TiroCarta = true;
                 this.cartaTiradaJugadorUno = this.partida.JugadorUno.Mazo[0];
 
@@ -106,6 +119,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             else
             {
                 this.labelMovimientoPartida.Text = $"Jugador 2 lanzo la carta: {this.partida.JugadorDos.Mazo[0].Numero} de {this.partida.JugadorDos.Mazo[0].Palo}";
+                this.historialPartida.AppendLine(this.labelMovimientoPartida.Text);
                 this.partida.JugadorDos.TiroCarta = true;
                 this.cartaTiradaJugadorDos = this.partida.JugadorDos.Mazo[0];
 
@@ -122,6 +136,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             if (this.partida.Turno == 1)
             {
                 this.labelMovimientoPartida.Text = $"Jugador 1 lanzo la carta: {this.partida.JugadorUno.Mazo[1].Numero} de {this.partida.JugadorUno.Mazo[1].Palo}";
+                this.historialPartida.AppendLine(this.labelMovimientoPartida.Text);
                 this.partida.JugadorUno.TiroCarta = true;
                 this.cartaTiradaJugadorUno = this.partida.JugadorUno.Mazo[1];
 
@@ -133,6 +148,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             else
             {
                 this.labelMovimientoPartida.Text = $"Jugador 2 lanzo la carta: {this.partida.JugadorDos.Mazo[1].Numero} de {this.partida.JugadorDos.Mazo[1].Palo}";
+                this.historialPartida.AppendLine(this.labelMovimientoPartida.Text);
                 this.partida.JugadorDos.TiroCarta = true;
                 this.cartaTiradaJugadorDos = this.partida.JugadorDos.Mazo[1];
 
@@ -149,6 +165,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             if (this.partida.Turno == 1)
             {
                 this.labelMovimientoPartida.Text = $"Jugador 1 lanzo la carta: {this.partida.JugadorUno.Mazo[2].Numero} de {this.partida.JugadorUno.Mazo[2].Palo}";
+                this.historialPartida.AppendLine(this.labelMovimientoPartida.Text);
                 this.partida.JugadorUno.TiroCarta = true;
                 this.cartaTiradaJugadorUno = this.partida.JugadorUno.Mazo[2];
 
@@ -160,6 +177,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             else
             {
                 this.labelMovimientoPartida.Text = $"Jugador 2 lanzo la carta: {this.partida.JugadorDos.Mazo[2].Numero} de {this.partida.JugadorDos.Mazo[2].Palo}";
+                this.historialPartida.AppendLine(this.labelMovimientoPartida.Text);
                 this.partida.JugadorDos.TiroCarta = true;
                 this.cartaTiradaJugadorDos = this.partida.JugadorDos.Mazo[2];
 
@@ -293,6 +311,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
                     {
                         this.partida.JugadorUno.Puntos += this.partida.PuntosQuieroTruco;
                         this.labelMovimientoPartida.Text = $"Jugador 1 GANO la RONDA";
+                        this.historialPartida.AppendLine(this.labelMovimientoPartida.Text);
                         this.CambiarRonda();
                     }
                 }
@@ -314,6 +333,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
                     {   
                         this.partida.JugadorDos.Puntos += this.partida.PuntosQuieroTruco;
                         this.labelMovimientoPartida.Text = $"Jugador 2 GANO la RONDA";
+                        this.historialPartida.AppendLine(this.labelMovimientoPartida.Text);
                         this.CambiarRonda();
                     }
                 }
@@ -374,6 +394,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             if (this.partida.SeCantoTruco)
             {
                 this.labelMovimientoPartida.Text = $"Jugador {this.partida.Turno} dijo QUIERO";
+                this.historialPartida.AppendLine(this.labelMovimientoPartida.Text);
                 this.partida.PuntosQuieroEnvido = 0;
                 this.partida.PuntosNoQuieroEnvido = 1;
             }
@@ -382,10 +403,12 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
                 if (this.quieroEnvido(sender, e))
                 {
                     this.labelMovimientoPartida.Text = $"Jugador 1 GANO el envido con {this.partida.JugadorUno.Envido} PUNTOS";
+                    this.historialPartida.AppendLine(this.labelMovimientoPartida.Text);
                 }
                 else
                 {
                     this.labelMovimientoPartida.Text = $"Jugador 2 GANO el envido con {this.partida.JugadorDos.Envido} PUNTOS";
+                    this.historialPartida.AppendLine(this.labelMovimientoPartida.Text);
                 }
                 this.partida.PuntosNoQuieroEnvido = 0;
             }
@@ -501,6 +524,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
         private void buttonEnvido_Click(object sender, EventArgs e)
         {
             this.labelMovimientoPartida.Text = $"Jugador {this.partida.Turno} cantó ENVIDO";
+            this.historialPartida.AppendLine(this.labelMovimientoPartida.Text);
             this.QuienCanto();
             if (this.partida.PuntosQuieroEnvido != 0)
             {
@@ -517,6 +541,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
         private void buttonRealEnvido_Click(object sender, EventArgs e)
         {
             this.labelMovimientoPartida.Text = $"Jugador {this.partida.Turno} cantó REAL ENVIDO";
+            this.historialPartida.AppendLine(this.labelMovimientoPartida.Text);
             this.QuienCanto();
             if (this.partida.PuntosQuieroEnvido != 0)
             {
@@ -531,6 +556,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
         private void buttonFaltaEnvido_Click(object sender, EventArgs e)
         {
             this.labelMovimientoPartida.Text = $"Jugador {this.partida.Turno} cantó FALTA ENVIDO";
+            this.historialPartida.AppendLine(this.labelMovimientoPartida.Text);
             this.QuienCanto();
             this.partida.SeCantoFaltaEnvido = true;
             if (this.partida.PuntosQuieroEnvido != 0)
@@ -546,6 +572,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
         private void buttonTruco_Click(object sender, EventArgs e)
         {
             this.labelMovimientoPartida.Text = $"Jugador {this.partida.Turno} cantó ";
+
             if (this.partida.PuntosQuieroTruco != 1)
             {
                 this.partida.PuntosNoQuieroTruco++;
@@ -557,14 +584,17 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
                 case 2:
                     this.buttonTruco.Text = "RETRUCO";
                     this.labelMovimientoPartida.Text += "TRUCO";
+                    this.historialPartida.AppendLine(this.labelMovimientoPartida.Text);
                     break;
                 case 3:
                     this.buttonTruco.Text = "VALE CUATRO";
                     this.labelMovimientoPartida.Text += "RETRUCO";
+                    this.historialPartida.AppendLine(this.labelMovimientoPartida.Text);
                     break;
                 case 4:
                     this.buttonTruco.Visible = false;
                     this.labelMovimientoPartida.Text += "VALE CUATRO";
+                    this.historialPartida.AppendLine(this.labelMovimientoPartida.Text);
                     break;
             }
             this.Truco();
@@ -628,6 +658,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
         private void buttonNoQuiero_Click(object sender, EventArgs e)
         {
             this.labelMovimientoPartida.Text = $"Jugador {this.partida.Turno} dijo NO QUIERO";
+            this.historialPartida.AppendLine(this.labelMovimientoPartida.Text);
             if (this.partida.SeCantoTruco)
             {
                 if (this.partida.Turno == 1)
@@ -686,12 +717,14 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             if (this.partida.Turno == 1)
             {
                 this.labelMovimientoPartida.Text = $"Jugador 1 se fue al MAZO";
+                this.historialPartida.AppendLine(this.labelMovimientoPartida.Text);
                 this.partida.JugadorDos.Puntos += this.partida.PuntosNoQuieroEnvido;
                 this.partida.JugadorDos.Puntos += this.partida.PuntosNoQuieroTruco;
             }
             else
             {
                 this.labelMovimientoPartida.Text = $"Jugador 2 se fue al MAZO";
+                this.historialPartida.AppendLine(this.labelMovimientoPartida.Text);
                 this.partida.JugadorUno.Puntos += this.partida.PuntosNoQuieroEnvido;
                 this.partida.JugadorUno.Puntos += this.partida.PuntosNoQuieroTruco;
             }
@@ -703,6 +736,8 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             if (this.partida.JugadorUno.Puntos > 14)
             {
                 MessageBox.Show("¡Ganó el jugador 1!", "VICTORIA");
+                this.estadisticasUsuario.PartidasGanadas++;
+                this.estadisticasUsuario.PartidasJugadas++;
                 this.TerminarPartida();
             }
             else
@@ -710,6 +745,8 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
                 if(this.partida.JugadorDos.Puntos > 14)
                 {
                     MessageBox.Show("¡Ganó el jugador 2!", "VICTORIA");
+                    this.estadisticasUsuario.PartidasPerdidas++;
+                    this.estadisticasUsuario.PartidasJugadas++;
                     this.TerminarPartida();
                 }
             }
@@ -717,10 +754,12 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
 
         private void TerminarPartida()
         {
+            this.estadisticasUsuario.ActualizarWinRate();
             this.DialogResult = DialogResult.OK;
             this.sala.Ronda = this.partida.Ronda;
             this.sala.EstadoPartida = EEstadoPartida.TERMINADA.ToString();
-            this.baseDatos.ModificarSala(sala);
+            this.conexionSalas.ModificarSala(sala);
+            this.conexionEstadisticasUsuario.ModificarEstadisticasUsuario(this.estadisticasUsuario);
         }
     }
 }

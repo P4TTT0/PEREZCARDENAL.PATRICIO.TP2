@@ -33,7 +33,6 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
             this.panelHeader = new System.Windows.Forms.Panel();
             this.buttonInicio = new System.Windows.Forms.Button();
             this.buttonCrearSala = new System.Windows.Forms.Button();
-            this.buttonHistorial = new System.Windows.Forms.Button();
             this.buttonEstadisticas = new System.Windows.Forms.Button();
             this.buttonJugar = new System.Windows.Forms.Button();
             this.panelContenedor = new System.Windows.Forms.Panel();
@@ -58,7 +57,6 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
             this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.panelHeader.Controls.Add(this.buttonInicio);
             this.panelHeader.Controls.Add(this.buttonCrearSala);
-            this.panelHeader.Controls.Add(this.buttonHistorial);
             this.panelHeader.Controls.Add(this.buttonEstadisticas);
             this.panelHeader.Controls.Add(this.buttonJugar);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
@@ -75,7 +73,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
             this.buttonInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonInicio.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonInicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.buttonInicio.Location = new System.Drawing.Point(691, 0);
+            this.buttonInicio.Location = new System.Drawing.Point(531, 0);
             this.buttonInicio.Margin = new System.Windows.Forms.Padding(10);
             this.buttonInicio.Name = "buttonInicio";
             this.buttonInicio.Size = new System.Drawing.Size(160, 80);
@@ -92,7 +90,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
             this.buttonCrearSala.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCrearSala.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonCrearSala.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.buttonCrearSala.Location = new System.Drawing.Point(531, 0);
+            this.buttonCrearSala.Location = new System.Drawing.Point(371, 0);
             this.buttonCrearSala.Margin = new System.Windows.Forms.Padding(10);
             this.buttonCrearSala.Name = "buttonCrearSala";
             this.buttonCrearSala.Size = new System.Drawing.Size(160, 80);
@@ -100,22 +98,6 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
             this.buttonCrearSala.Text = "CREAR SALA";
             this.buttonCrearSala.UseVisualStyleBackColor = false;
             this.buttonCrearSala.Click += new System.EventHandler(this.buttonCrearSala_Click);
-            // 
-            // buttonHistorial
-            // 
-            this.buttonHistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.buttonHistorial.Dock = System.Windows.Forms.DockStyle.Left;
-            this.buttonHistorial.FlatAppearance.BorderSize = 0;
-            this.buttonHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonHistorial.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonHistorial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.buttonHistorial.Location = new System.Drawing.Point(371, 0);
-            this.buttonHistorial.Margin = new System.Windows.Forms.Padding(10);
-            this.buttonHistorial.Name = "buttonHistorial";
-            this.buttonHistorial.Size = new System.Drawing.Size(160, 80);
-            this.buttonHistorial.TabIndex = 2;
-            this.buttonHistorial.Text = "HISTORIAL";
-            this.buttonHistorial.UseVisualStyleBackColor = false;
             // 
             // buttonEstadisticas
             // 
@@ -132,6 +114,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
             this.buttonEstadisticas.TabIndex = 1;
             this.buttonEstadisticas.Text = "ESTADISTICAS";
             this.buttonEstadisticas.UseVisualStyleBackColor = false;
+            this.buttonEstadisticas.Click += new System.EventHandler(this.buttonEstadisticas_Click);
             // 
             // buttonJugar
             // 
@@ -181,7 +164,6 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
 
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Panel panelHeader;
-        private System.Windows.Forms.Button buttonHistorial;
         private System.Windows.Forms.Button buttonEstadisticas;
         private System.Windows.Forms.Button buttonJugar;
         private System.Windows.Forms.Panel panelContenedor;

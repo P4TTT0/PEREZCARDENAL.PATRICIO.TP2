@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +24,7 @@ namespace BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_
         #endregion
 
         #region --CONSTRUCTORES--
-        public Usuario(){ }
+        public Usuario() { }
         public Usuario(string nombre, string contraseña)
         {
             this.nombreUsuario = nombre;
@@ -46,6 +48,23 @@ namespace BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_
         public static bool operator !=(Usuario usuarioUno, Usuario usuarioDos)
         {
             return !(usuarioUno == usuarioDos);
+        }
+
+        public static bool operator ==(Usuario usuarioUno, int id)
+        {
+            bool validacion = false;
+
+            if (usuarioUno is not null && id > -1)
+            {
+                validacion = usuarioUno.id == id;
+            }
+
+            return validacion;
+        }
+
+        public static bool operator !=(Usuario usuarioUno, int id)
+        {
+            return !(usuarioUno == id);
         }
         #endregion
     }

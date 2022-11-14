@@ -13,13 +13,15 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
 {
     public partial class FormRegistrarUsuario : Form
     {
+        Usuario nuevoUsuario;
+        ConexionUsuario conexionUsuario;
         public FormRegistrarUsuario()
         {
             InitializeComponent();
+            this.nuevoUsuario = new Usuario();
+            this.conexionUsuario = new ConexionUsuario();
         }
 
-        Usuario nuevoUsuario = new Usuario();
-        ConexionBaseDatos baseDatos = new ConexionBaseDatos();
 
         public Usuario NuevoUsuario { get => nuevoUsuario; }
 
@@ -35,7 +37,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
                 this.nuevoUsuario.NombreUsuario = this.textBoxUsuario.Text;
                 this.nuevoUsuario.Contraseña = this.textBoxContraseña.Text;
 
-                if (this.baseDatos.ComprobarUsuario(this.nuevoUsuario))
+                if (this.conexionUsuario.ComprobarUsuario(this.nuevoUsuario))
                 {
                     MessageBox.Show("USUARIO EXISTENTE");
                 }

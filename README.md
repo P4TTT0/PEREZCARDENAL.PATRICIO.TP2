@@ -15,8 +15,10 @@ Mi nombre es Perez Cardenal Patricio, tengo 18 años, soy estudiante de programa
 - [JUEGO] En la partida tendremos dos lados, la interfaz general, la cual esta ubicada en el margen superior del formulario en la que podremos observar toda la informacion de la partida y la interfaz del jugador. En esta ultima tendremos los diferentes botones que nos permitiran accionar en el juego y las cartas que posee el usuario en cuestion.
 
 ## []-| DIAGRAMA DE CLASES.
+![DIAGRAMA DE CLASES](https://user-images.githubusercontent.com/98591487/201810134-e2249e31-cd7f-489c-836c-9c2b53c57774.png)
 
 ## []-| DIAGRAMA DE BASE DE DATOS.
+![DIAGRAMA DE TABLAS](https://user-images.githubusercontent.com/98591487/201810143-cdfc347a-61f8-4b97-8040-4d77ab8897be.png)
 
 ## []-| JUSTIFACION TECNICA.
 

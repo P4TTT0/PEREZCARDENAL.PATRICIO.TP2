@@ -39,7 +39,7 @@ namespace TEST_PARCIAL_02_PEREZCARDENAL.PATRICIO_
         }
 
         [TestMethod]
-        public void Cartas_Desiguales_OK()
+        public void Cartas_Distintas_OK()
         {
             //ARRANGE
             Carta cartaUno = new Carta(12, EPalos.COPA, 7);
@@ -54,7 +54,7 @@ namespace TEST_PARCIAL_02_PEREZCARDENAL.PATRICIO_
         }
 
         [TestMethod]
-        public void Cartas_Desiguales_MAL()
+        public void Cartas_Distintas_MAL()
         {
             //ARRANGE
             Carta cartaUno = new Carta(12, EPalos.COPA, 7);
@@ -102,12 +102,6 @@ namespace TEST_PARCIAL_02_PEREZCARDENAL.PATRICIO_
             //ASSERT
             Assert.IsTrue(validacion);
         }
-    }
-
-    [TestClass]
-    public class Test_Parcial_ESTADISTICAS_
-    {
-
     }
 
     [TestClass]
@@ -171,9 +165,6 @@ namespace TEST_PARCIAL_02_PEREZCARDENAL.PATRICIO_
         public void CalcularPosibleEnvido_OK()
         {
             //ARRANGE
-            List<Carta> mazoUno = new List<Carta>();
-
-
             Carta cartaUno = new Carta(12, EPalos.COPA, 7);
             Carta cartaDos = new Carta(11, EPalos.COPA, 6);
             //20 DE ENVIDO.
@@ -186,24 +177,140 @@ namespace TEST_PARCIAL_02_PEREZCARDENAL.PATRICIO_
             Carta cartaSeis = new Carta(4, EPalos.ORO, 1);
             //7 DE ENVIDO.
 
-            mazoUno.Add(cartaUno);
-            mazoUno.Add(cartaDos);
-            mazoUno.Add(cartaTres);
-
-            List<Carta> mazoDos = new List<Carta>();
-
-            //33 DE ENVIDO.
-
-            mazoDos.Add(cartaCuatro);
-            mazoDos.Add(cartaCinco);
-            mazoDos.Add(cartaSeis);
-
             Partida partida = new Partida();
 
             bool validacion = partida.CalcularPosibleEnvido(cartaUno, cartaDos) == 20 && partida.CalcularPosibleEnvido(cartaTres, cartaCuatro) == 26 && partida.CalcularPosibleEnvido(cartaCinco, cartaSeis) == 7;
 
             //ASSERT
             Assert.IsTrue(validacion);
+        }
+
+        [TestMethod]
+        public void CalcularEnvido_OK()
+        {
+
+            //ARRANGE
+            List<Carta> mazoUno = new List<Carta>();
+            List<Carta> mazoDos = new List<Carta>();
+            List<Carta> mazoTres = new List<Carta>();
+
+            Partida partida = new Partida();
+
+
+            Carta cartaUno = new Carta(12, EPalos.COPA, 0);
+            Carta cartaDos = new Carta(11, EPalos.COPA, 0);
+            Carta cartaTres = new Carta(6, EPalos.ESPADA, 0);
+            //20 DE ENVIDO.
+
+            Carta cartaCuatro = new Carta(6, EPalos.ESPADA, 0);
+            Carta cartaCinco = new Carta(7, EPalos.ESPADA, 0);
+            Carta cartaSeis = new Carta(4, EPalos.ESPADA, 0);
+            //33 DE ENVIDO.
+
+            Carta cartaSiete = new Carta(12, EPalos.ESPADA, 0);
+            Carta cartaOcho = new Carta(7, EPalos.BASTO, 0);
+            Carta cartaNueve = new Carta(4, EPalos.ORO, 0);
+            //7 DE ENVIDO.
+
+            mazoUno.Add(cartaUno);
+            mazoUno.Add(cartaDos);
+            mazoUno.Add(cartaTres);
+
+            mazoDos.Add(cartaCuatro);
+            mazoDos.Add(cartaCinco);
+            mazoDos.Add(cartaSeis);
+
+            mazoTres.Add(cartaSiete);
+            mazoTres.Add(cartaOcho);
+            mazoTres.Add(cartaNueve);
+
+
+            //ACT
+            bool validacion = partida.CalcularEnvido(mazoUno) == 20 && partida.CalcularEnvido(mazoDos) == 33 && partida.CalcularEnvido(mazoTres) == 7;
+
+            //ASSERT
+            Assert.IsTrue(validacion);
+        }
+    }
+
+
+    [TestClass]
+    public class Test_Parcial_SALAS
+    {
+        [TestMethod]
+        public void Salas_Mismo_Indice_OK()
+        {
+            //ARRANGE
+            ConexionSalas conexionSalas = new ConexionSalas();
+            List<Salas> listaSalas = new List<Salas>();
+            Salas sala = new Salas();
+
+            listaSalas = conexionSalas.ObtenerLista();
+
+            //ACT
+            //En este caso la sala en la posicion 0 tiene el ID 1 - En caso de eliminar dicha sala esto romperia, pero es para hacer la prueba.
+            bool validacion = listaSalas[0] == 1;
+
+            //ASSERT
+            Assert.IsTrue(validacion);
+        }
+
+        [TestMethod]
+        public void Salas_Distinto_Indice_OK()
+        {
+            //ARRANGE
+            ConexionSalas conexionSalas = new ConexionSalas();
+            List<Salas> listaSalas = new List<Salas>();
+            Salas sala = new Salas();
+
+            listaSalas = conexionSalas.ObtenerLista();
+
+            //ACT
+            //En este caso la sala en la posicion 0 tiene el ID 1 - En caso de eliminar dicha sala esto romperia, pero es para hacer la prueba.
+            bool validacion = listaSalas[0] != 3;
+
+            //ASSERT
+            Assert.IsTrue(validacion);
+        }
+    }
+
+    [TestClass]
+    public class Test_Parcial_USUARIO
+    {
+        [TestMethod]
+        public void Usuarios_Iguales_OK()
+        {
+            //ARRANGE
+            ConexionUsuario conexionUsuario = new ConexionUsuario();
+            List<Usuario> listaUsuarios = new List<Usuario>();
+            Usuario usuario = new Usuario("p4ttt0", "admin12");
+
+            listaUsuarios = conexionUsuario.ObtenerLista();
+
+            //ACT
+            bool validacion = listaUsuarios[0] == usuario;
+
+            //ASSERT
+            Assert.IsTrue(validacion);
+
+        }
+
+        [TestMethod]
+        public void Usuarios_Distintos_OK()
+        {
+            //ARRANGE
+            ConexionUsuario conexionUsuario = new ConexionUsuario();
+            List<Usuario> listaUsuarios = new List<Usuario>();
+            Usuario usuario = new Usuario("p4ttt0", "0239123123");
+
+            listaUsuarios = conexionUsuario.ObtenerLista();
+
+            //ACT
+            bool validacion = listaUsuarios[0] != usuario;
+
+            //ASSERT
+            Assert.IsTrue(validacion);
+
         }
     }
 }

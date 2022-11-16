@@ -49,6 +49,7 @@ namespace BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_
             }
             catch(Exception e)
             {
+                Console.WriteLine(e.Message);
                 historialPartida = "¡ERROR EN CARGAR HISTORIAL O LA SALA NO POSEE UNO! (La partida pudo haberse jugado antes de la implementacion de los historiales)";
             }
 

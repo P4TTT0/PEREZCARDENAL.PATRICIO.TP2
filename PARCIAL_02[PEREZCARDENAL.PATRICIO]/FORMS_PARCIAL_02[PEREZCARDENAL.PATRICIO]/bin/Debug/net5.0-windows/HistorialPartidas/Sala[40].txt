@@ -1,0 +1,22 @@
+Jugador 1 lanzo la carta: 3 de ESPADA
+Jugador 2 cantó ENVIDO
+Jugador 1 GANO el envido con 25 PUNTOS
+Jugador 2 lanzo la carta: 12 de COPA
+Jugador 1 cantó TRUCO
+Jugador 2 cantó RETRUCO
+Jugador 1 dijo QUIERO
+Jugador 1 lanzo la carta: 2 de ESPADA
+Jugador 2 lanzo la carta: 12 de ORO
+Jugador 1 GANO la RONDA
+Jugador 2 cantó ENVIDO
+Jugador 1 cantó ENVIDO
+Jugador 2 GANO el envido con 31 PUNTOS
+Jugador 2 se fue al MAZO
+Jugador 1 cantó FALTA ENVIDO
+Jugador 2 GANO el envido con 7 PUNTOS
+Jugador 1 se fue al MAZO
+Jugador 2 cantó ENVIDO
+Jugador 2 GANO el envido con 6 PUNTOS
+Jugador 2 se fue al MAZO
+VICTORIA DEL JUGADOR 2
+

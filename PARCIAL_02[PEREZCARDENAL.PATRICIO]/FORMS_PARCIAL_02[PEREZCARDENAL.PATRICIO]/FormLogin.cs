@@ -30,6 +30,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
+            FormLogin.usuarioActual = new Usuario();
             this.textBoxContraseña.UseSystemPasswordChar = true;
         }
 
@@ -68,10 +69,12 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
 
             if (formRegistrar.ShowDialog() == DialogResult.OK)
             {
-                if (this.conexionUsuario.Agregar(formRegistrar.NuevoUsuario) && this.conexionEstadisticasUsuario.AgregarEstadisticasUsuario(formRegistrar.NuevoUsuario))
+                if (this.conexionUsuario.Agregar(formRegistrar.NuevoUsuario))
                 {
                     this.ActualizarMensajeInformativo(2);
                 }
+                FormLogin.usuarioActual.Id = this.conexionUsuario.RetornarIdUsuario(formRegistrar.NuevoUsuario);
+                this.conexionEstadisticasUsuario.AgregarEstadisticasUsuario(FormLogin.usuarioActual);
             }
         }
 

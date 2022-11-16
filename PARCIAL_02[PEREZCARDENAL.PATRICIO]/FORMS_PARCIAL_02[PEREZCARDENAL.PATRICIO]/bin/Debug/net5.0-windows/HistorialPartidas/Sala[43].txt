@@ -1,0 +1,15 @@
+Jugador 1 cantó FALTA ENVIDO
+Jugador 2 GANO el envido con 22 PUNTOS
+Jugador 1 cantó TRUCO
+Jugador 2 dijo QUIERO
+Jugador 1 lanzo la carta: 6 de COPA
+Jugador 2 cantó RETRUCO
+Jugador 1 dijo QUIERO
+Jugador 2 lanzo la carta: 2 de ORO
+Jugador 2 lanzo la carta: 10 de ORO
+Jugador 1 cantó VALE CUATRO
+Jugador 2 dijo QUIERO
+Jugador 1 lanzo la carta: 4 de ORO
+Jugador 2 GANO la RONDA
+VICTORIA DEL JUGADOR 2
+

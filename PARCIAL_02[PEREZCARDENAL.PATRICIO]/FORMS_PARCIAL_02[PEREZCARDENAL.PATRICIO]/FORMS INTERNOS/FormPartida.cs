@@ -761,6 +761,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.sala.Ronda = this.partida.Ronda;
             this.sala.EstadoPartida = EEstadoPartida.TERMINADA.ToString();
             this.conexionSalas.ModificarSala(sala);
+            this.estadisticasUsuario.Id = FormLogin.UsuarioActual.Id;
             this.conexionEstadisticasUsuario.ModificarEstadisticasUsuario(this.estadisticasUsuario);
             ArchivoDeTexto.GuardarHistorialSala(this.historialPartida.ToString(), this.sala.Id);
         }
@@ -768,16 +769,19 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
         private void FormPartida_FormClosing(object sender, FormClosingEventArgs e)
         {
             //NO PREGUNTAR ESTO SI LA PARTIDA TERMINA DEBIDO A ALGUNA VICTORIA.
-            if(MessageBox.Show("¡Si sale de la partida se te sumara como partida perdida!", "CUIDADO", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
+            if (!(this.partida.JugadorUno.Puntos > 14 || this.partida.JugadorDos.Puntos > 14))
             {
-                this.historialPartida.AppendLine("PARTIDA CANCELADA");
-                this.estadisticasUsuario.PartidasPerdidas++;
-                this.estadisticasUsuario.PartidasJugadas++;
-                this.TerminarPartida();
-            }
-            else
-            {
-                e.Cancel = true;
+                if(MessageBox.Show("¡Si sale de la partida se te sumara como partida perdida!", "CUIDADO", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
+                {
+                    this.historialPartida.AppendLine("PARTIDA CANCELADA");
+                    this.estadisticasUsuario.PartidasPerdidas++;
+                    this.estadisticasUsuario.PartidasJugadas++;
+                    this.TerminarPartida();
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
             }
         }
     }

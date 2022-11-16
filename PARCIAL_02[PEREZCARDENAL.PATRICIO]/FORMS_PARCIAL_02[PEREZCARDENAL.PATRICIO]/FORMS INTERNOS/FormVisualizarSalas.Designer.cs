@@ -141,7 +141,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.buttonVerEnJuego.Name = "buttonVerEnJuego";
             this.buttonVerEnJuego.Size = new System.Drawing.Size(202, 62);
             this.buttonVerEnJuego.TabIndex = 15;
-            this.buttonVerEnJuego.Text = "VER EN JUEGO";
+            this.buttonVerEnJuego.Text = "VER SIN COMENZAR";
             this.buttonVerEnJuego.UseVisualStyleBackColor = false;
             this.buttonVerEnJuego.Click += new System.EventHandler(this.buttonVerEnJuego_Click);
             // 

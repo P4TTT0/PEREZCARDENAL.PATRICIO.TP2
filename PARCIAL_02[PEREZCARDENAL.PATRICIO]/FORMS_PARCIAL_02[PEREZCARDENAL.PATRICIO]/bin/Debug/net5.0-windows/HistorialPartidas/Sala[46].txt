@@ -1,0 +1,10 @@
+Jugador 1 cantó ENVIDO
+Jugador 2 GANO el envido con 28 PUNTOS
+Jugador 1 cantó TRUCO
+Jugador 2 dijo QUIERO
+Jugador 1 se fue al MAZO
+Jugador 2 cantó FALTA ENVIDO
+Jugador 2 GANO el envido con 29 PUNTOS
+Jugador 2 se fue al MAZO
+VICTORIA DEL JUGADOR 2
+

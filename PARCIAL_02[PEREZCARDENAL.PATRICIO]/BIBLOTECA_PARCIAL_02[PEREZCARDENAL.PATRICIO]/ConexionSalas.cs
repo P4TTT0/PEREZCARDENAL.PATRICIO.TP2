@@ -95,6 +95,7 @@ namespace BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_
             }
             catch (Exception e)
             {
+                Console.WriteLine(e.Message);
                 validacion = false;
             }
             finally

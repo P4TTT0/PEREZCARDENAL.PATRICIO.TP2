@@ -31,7 +31,10 @@ He utilizado las pruebas unitarias para corroborar y verificar el buen funcionam
 - *INTERFACES Y GENERICOS*
 He creado una interfaz con parametros genericos para implementarlo en la conexion de las tres diferentes tablas de la base de datos.
 
-- *ESCRITURA DE ARCHIVO Y SERIALIZACION JSON*
+- *ESCRITURA DE ARCHIVO*
+Realice una escritura en un archivo de tipo TXT para poder acceder guardar y acceder al historial de cada partida terminada.
+
+- *SERIALIZACION JSON*
 He realizado una escritura en un archivo de tipo JSON con todas las cartas existentes del truco para luego poder deserializarlas en un mazo y que se facilite la tarea de repartir.
 
 - *BASE DE DATOS Y SQL*

@@ -19,7 +19,11 @@ namespace BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_
         {
             JSON.path = @"..\..\..\..\FORMS_PARCIAL_02[PEREZCARDENAL.PATRICIO]\bin\Debug\net5.0-windows\Mazo.Json";
         }
-
+        /// <summary>
+        /// Metodo que se encarga de serializar una carta.
+        /// </summary>
+        /// <param name="cartaAux"></param>
+        /// <returns>TRUE: Si se pudo serializar la carta || FALSE: Si no se pudo serializar la carta. </returns>
         public static bool SerializarJSON(Carta cartaAux)
         {
             bool validacion = false;
@@ -37,11 +41,15 @@ namespace BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_
             catch(Exception e)
             {
                 Console.WriteLine(e.Message);
+                validacion = false;
             }
 
             return validacion;
         }
-
+        /// <summary>
+        /// Metodo que se encarga de deserializar un mazo de cartas en una lista para luego retornarla
+        /// </summary>
+        /// <returns>Un mazo de cartas</returns>
         public static List<Carta> DeserializarJSON()
         {
             List<Carta> listaCartas = new List<Carta>();

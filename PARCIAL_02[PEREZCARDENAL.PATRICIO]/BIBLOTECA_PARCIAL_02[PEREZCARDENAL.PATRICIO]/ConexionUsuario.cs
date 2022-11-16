@@ -114,7 +114,6 @@ namespace BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_
 
             return id;
         }
-
         public bool ComprobarUsuario(Usuario auxUsuario)
         {
             bool validacion = false;
@@ -122,6 +121,21 @@ namespace BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_
             foreach (Usuario usuario in listaUsuarios)
             {
                 if (auxUsuario == usuario)
+                {
+                    validacion = true;
+                    break;
+                }
+            }
+            return validacion;
+        }
+
+        public bool ComprobarUsuario(string nombreUsuario)
+        {
+            bool validacion = false;
+            List<Usuario> listaUsuarios = this.ObtenerLista();
+            foreach (Usuario usuario in listaUsuarios)
+            {
+                if (usuario == nombreUsuario)
                 {
                     validacion = true;
                     break;

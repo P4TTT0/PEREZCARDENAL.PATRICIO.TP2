@@ -105,9 +105,9 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.buttonJugar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonJugar.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonJugar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.buttonJugar.Location = new System.Drawing.Point(765, 574);
+            this.buttonJugar.Location = new System.Drawing.Point(826, 574);
             this.buttonJugar.Name = "buttonJugar";
-            this.buttonJugar.Size = new System.Drawing.Size(332, 62);
+            this.buttonJugar.Size = new System.Drawing.Size(271, 62);
             this.buttonJugar.TabIndex = 13;
             this.buttonJugar.Text = "JUGAR";
             this.buttonJugar.UseVisualStyleBackColor = false;
@@ -159,6 +159,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.buttonVerHistorial.TabIndex = 16;
             this.buttonVerHistorial.Text = "VER HISTORIAL";
             this.buttonVerHistorial.UseVisualStyleBackColor = false;
+            this.buttonVerHistorial.Click += new System.EventHandler(this.buttonVerHistorial_Click);
             // 
             // FormVisualizarSalas
             // 

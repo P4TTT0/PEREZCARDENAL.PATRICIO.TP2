@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_.Carta">
+    <Position X="4" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAgEAAAAAEAAAABIAAAAEAAAABAiA=</HashCode>
+      <FileName>Carta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_.ConexionEstadisticasUsuario" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAQAAAgBAAAAAAAAAAAAAAAQAAAAAAgAAAE=</HashCode>
+      <FileName>ConexionEstadisticasUsuario.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_.ConexionSalas" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAEAAAAAAAAAABAAAAAAAAAAAAAAAAAAAEAAgAAAE=</HashCode>
+      <FileName>ConexionSalas.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_.ConexionUsuario" BaseTypeListCollapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAARAAAAAAABAAAAAAAAAAAAAAAAAAAAAggAAAE=</HashCode>
+      <FileName>ConexionUsuario.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_.EstadisticasUsuario">
+    <Position X="7.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAEAAAAJCAAAAAACAAAAAgAAAAAAAQAAAAMAAAgA=</HashCode>
+      <FileName>EstadisticasUsuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_.JSON">
+    <Position X="5.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAACAAAAAAAAAgAAAQAAAAAQAAA=</HashCode>
+      <FileName>JSON.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_.Jugador">
+    <Position X="9.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAQABAAEAgQAAAIAIAAAACAAAAAAAAACAAAAAk=</HashCode>
+      <FileName>Jugador.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_.Partida">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAgEAAAIAUAEIABCBKBACAABAhowAIACEADBAAQQw=</HashCode>
+      <FileName>Partida.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_.Salas">
+    <Position X="2.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QABCgAAAAIAAAAAAwAACAAAAAgAAAIAAAAAAAAAAQiA=</HashCode>
+      <FileName>Salas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_.Usuario">
+    <Position X="5.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAIAgAACAAAAAAAAAIAAAIAAAACAAiA=</HashCode>
+      <FileName>Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_.IBaseDatos&lt;T&gt;">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAgAAAA=</HashCode>
+      <FileName>IBaseDatos.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="EEstadoPartida">
+    <Position X="2.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Enumerados.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EPalos">
+    <Position X="4" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAABAAAAAAAAIAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Enumerados.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

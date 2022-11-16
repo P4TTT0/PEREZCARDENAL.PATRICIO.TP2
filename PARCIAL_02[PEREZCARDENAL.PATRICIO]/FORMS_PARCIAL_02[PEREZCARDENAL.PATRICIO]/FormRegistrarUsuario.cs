@@ -32,24 +32,26 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
 
         private void buttonRegistrarse_Click(object sender, EventArgs e)
         {
-            if (this.textBoxUsuario.Text != "" && this.textBoxUsuario.Text != "")
+            if (this.textBoxUsuario.Text == "" || this.textBoxUsuario.Text == "")
             {
-                this.nuevoUsuario.NombreUsuario = this.textBoxUsuario.Text;
-                this.nuevoUsuario.Contraseña = this.textBoxContraseña.Text;
+                MessageBox.Show("¡CAMPOS VACIOS!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if(this.textBoxUsuario.Text.Length > 30 && this.textBoxUsuario.Text.Length > 30)
+            {
+                MessageBox.Show("¡LA CONTRASEÑA O EL USUARIO DEBE CONTENER MENOS DE 30 CARACTERES!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            this.nuevoUsuario.NombreUsuario = this.textBoxUsuario.Text;
+            this.nuevoUsuario.Contraseña = this.textBoxContraseña.Text;
+            if (this.conexionUsuario.ComprobarUsuario(this.textBoxUsuario.Text))
+            {
+                MessageBox.Show("¡USUARIO EXISTENTE!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-                if (this.conexionUsuario.ComprobarUsuario(this.nuevoUsuario))
-                {
-                    MessageBox.Show("USUARIO EXISTENTE");
-                }
-                else
-                {
-                    this.DialogResult = DialogResult.OK;
-                }
-            }
-            else
-            {
-                MessageBox.Show("CAMPOS VACIOS!");
-            }
+            this.DialogResult = DialogResult.OK;
+
         }
 
         private void buttonMostrarContraseña_Click(object sender, EventArgs e)

@@ -30,6 +30,12 @@ namespace BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_
         #endregion
 
         #region--METODOS--  
+        /// <summary>
+        /// Sobrecarga del operador == para comparar una el ID de una sala con una ID pasada por parametro
+        /// </summary>
+        /// <param name="salaUno"></param>
+        /// <param name="id"></param>
+        /// <returns>TRUE: Si la el id de la sala es igual al id pasado por parametro || FALSE: Si la id de la sala no es igual al id pasado por parametro</returns>
         public static bool operator ==(Salas salaUno, int id)
         {
             bool validacion = false;
@@ -45,6 +51,22 @@ namespace BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_
         public static bool operator !=(Salas salaUno, int id)
         {
             return !(salaUno == id);
+        }
+
+        public override bool Equals(object obj)
+        {
+            bool validacion = false;
+            if (obj is Salas)
+            {
+                validacion = this == ((Salas)obj);
+            }
+
+            return validacion;
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
         }
         #endregion
     }

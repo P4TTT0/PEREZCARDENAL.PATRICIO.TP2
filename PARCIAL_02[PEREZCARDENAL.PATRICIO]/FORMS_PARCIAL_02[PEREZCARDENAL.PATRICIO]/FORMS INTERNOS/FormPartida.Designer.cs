@@ -587,6 +587,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.MinimumSize = new System.Drawing.Size(1167, 766);
             this.Name = "FormPartida";
             this.Text = "PARTIDA";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormPartida_FormClosing);
             this.Load += new System.EventHandler(this.FormPartida_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCarta3)).EndInit();

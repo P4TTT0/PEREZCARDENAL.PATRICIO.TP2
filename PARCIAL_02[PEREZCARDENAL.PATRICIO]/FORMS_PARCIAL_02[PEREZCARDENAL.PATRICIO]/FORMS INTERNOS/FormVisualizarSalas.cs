@@ -64,7 +64,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
 
             foreach (Salas sala in listaSalas)
             {
-                if (sala.NombreCreador == FormLogin.UsuarioActual.NombreUsuario && sala.EstadoPartida == EEstadoPartida.EN_JUEGO.ToString())
+                if (sala.NombreCreador == FormLogin.UsuarioActual.NombreUsuario && sala.EstadoPartida == EEstadoPartida.SIN_COMENZAR.ToString())
                 {
                     this.filaSala = this.tablaSalas.NewRow();
                     this.filaSala[0] = sala.Id;
@@ -127,14 +127,15 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
                         if (sala.EstadoPartida == EEstadoPartida.TERMINADA.ToString())
                         {
                             this.buttonJugar.Enabled = false;
-                            break;
+                            this.buttonVerHistorial.Enabled = true;
                         }
                         else
                         {
-                            auxSala = sala;
                             this.buttonJugar.Enabled = true;
-                            break;
+                            this.buttonVerHistorial.Enabled = false;
                         }
+                            auxSala = sala;
+                            break;
                     }
                 } 
             }
@@ -144,6 +145,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
 
         private void dataGridViewSalas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            ArchivoDeTexto.path = "HistorialPartidas";
             int indice;
             indice = e.RowIndex;
             this.auxSala = this.SeleccionarSala(indice);
@@ -153,6 +155,9 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
         {
             if (this.auxSala is not null)
             {
+                this.auxSala.EstadoPartida = EEstadoPartida.EN_JUEGO.ToString();
+                this.conexionSalas.ModificarSala(this.auxSala);
+                this.CargarDataGridSalasFiltrado();
                Task.Run(() => this.AbrirSala(this.auxSala));
             }
         }
@@ -174,6 +179,12 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
         private void buttonVerTodas_Click(object sender, EventArgs e)
         {
             this.CargarDataGridSalas();
+        }
+
+        private void buttonVerHistorial_Click(object sender, EventArgs e)
+        {
+            FormHistorialPartida formHistorial = new FormHistorialPartida(ArchivoDeTexto.LeerHistorialPartida(this.auxSala.Id));
+            formHistorial.ShowDialog();
         }
     }
 }

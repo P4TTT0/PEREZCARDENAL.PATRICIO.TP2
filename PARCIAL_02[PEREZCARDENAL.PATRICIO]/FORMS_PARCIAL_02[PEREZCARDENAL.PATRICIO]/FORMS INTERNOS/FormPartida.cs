@@ -736,6 +736,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             if (this.partida.JugadorUno.Puntos > 14)
             {
                 MessageBox.Show("¡Ganó el jugador 1!", "VICTORIA");
+                this.historialPartida.AppendLine("VICTORIA DEL JUGADOR 1");
                 this.estadisticasUsuario.PartidasGanadas++;
                 this.estadisticasUsuario.PartidasJugadas++;
                 this.TerminarPartida();
@@ -745,6 +746,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
                 if(this.partida.JugadorDos.Puntos > 14)
                 {
                     MessageBox.Show("¡Ganó el jugador 2!", "VICTORIA");
+                    this.historialPartida.AppendLine("VICTORIA DEL JUGADOR 2");
                     this.estadisticasUsuario.PartidasPerdidas++;
                     this.estadisticasUsuario.PartidasJugadas++;
                     this.TerminarPartida();
@@ -760,6 +762,23 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_.FORMS_INTERNOS
             this.sala.EstadoPartida = EEstadoPartida.TERMINADA.ToString();
             this.conexionSalas.ModificarSala(sala);
             this.conexionEstadisticasUsuario.ModificarEstadisticasUsuario(this.estadisticasUsuario);
+            ArchivoDeTexto.GuardarHistorialSala(this.historialPartida.ToString(), this.sala.Id);
+        }
+
+        private void FormPartida_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //NO PREGUNTAR ESTO SI LA PARTIDA TERMINA DEBIDO A ALGUNA VICTORIA.
+            if(MessageBox.Show("¡Si sale de la partida se te sumara como partida perdida!", "CUIDADO", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
+            {
+                this.historialPartida.AppendLine("PARTIDA CANCELADA");
+                this.estadisticasUsuario.PartidasPerdidas++;
+                this.estadisticasUsuario.PartidasJugadas++;
+                this.TerminarPartida();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

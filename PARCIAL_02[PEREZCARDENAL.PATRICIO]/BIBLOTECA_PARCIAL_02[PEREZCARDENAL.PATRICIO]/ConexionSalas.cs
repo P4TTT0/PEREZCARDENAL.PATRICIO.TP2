@@ -115,7 +115,7 @@ namespace BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_
             try
             {
                 string comandoSql = "INSERT INTO Salas VALUES (";
-                comandoSql += "'" + usuario.NombreUsuario + "'" + "," + "'" + DateTime.Now + "'" + "," + "'" + EEstadoPartida.EN_JUEGO.ToString() + "'" + "," + 1 + ")";
+                comandoSql += "'" + usuario.NombreUsuario + "'" + "," + "'" + DateTime.Now + "'" + "," + "'" + EEstadoPartida.SIN_COMENZAR.ToString() + "'" + "," + 1 + ")";
 
                 this.comando = new SqlCommand();
 

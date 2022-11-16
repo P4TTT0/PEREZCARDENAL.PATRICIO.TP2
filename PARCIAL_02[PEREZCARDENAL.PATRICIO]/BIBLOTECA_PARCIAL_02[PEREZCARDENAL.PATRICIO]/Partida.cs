@@ -49,7 +49,11 @@ namespace BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_
             this.jugadorDos = new Jugador();
         }
         #endregion
-
+        /// <summary>
+        /// Metodo que se encarga de repartir cartas de manera aleatoria utilizando un random para simular que el mismo ha sido mezclado
+        /// </summary>
+        /// <param name="mazo"></param>
+        /// <returns>El mazo con las cartas repartidas</returns>
         #region
         public List<Carta> RepartirCartas(List<Carta> mazo)
         {
@@ -66,7 +70,11 @@ namespace BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_
 
             return auxMazo;
         }
-
+        /// <summary>
+        /// Metodo que se encarga de ELIMINAR una carta sin reducir la cantidad de cartas en un mazo
+        /// </summary>
+        /// <param name="mazo"></param>
+        /// <param name="indice"></param>
         public void EliminarCartaMazo(List<Carta> mazo, int indice)
         {
             mazo[indice] = null;
@@ -86,7 +94,11 @@ namespace BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_
 
             return this.turno;
         }
-
+        /// <summary>
+        /// Metodo encargado de calcular el ENVIDO de un mazo de 3 cartas realizando una combinatoria de los 3 posibles casos de envido (ENTRE 2 CARTAS) de un mismo mazo.
+        /// </summary>
+        /// <param name="mazo"></param>
+        /// <returns>La cantidad de envido maxima de un mazo</returns>
         public int CalcularEnvido(List<Carta> mazo)
         {
             //ENVIDO UNO 1 - 2 || 2 - 1
@@ -117,7 +129,12 @@ namespace BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_
 
             return envido;
         }
-
+        /// <summary>
+        /// Metodo encargado de calcular el envido entre 2 cartas
+        /// </summary>
+        /// <param name="cartaUno"></param>
+        /// <param name="cartaDos"></param>
+        /// <returns>El envido maximo entre esas dos cartas</returns>
         public int CalcularPosibleEnvido(Carta cartaUno, Carta cartaDos)
         {
             int envido = 0;

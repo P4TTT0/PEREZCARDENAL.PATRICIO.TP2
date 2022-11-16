@@ -1,5 +1,6 @@
 ﻿public enum EEstadoPartida
 {
+    SIN_COMENZAR,
     EN_JUEGO,
     TERMINADA
 }

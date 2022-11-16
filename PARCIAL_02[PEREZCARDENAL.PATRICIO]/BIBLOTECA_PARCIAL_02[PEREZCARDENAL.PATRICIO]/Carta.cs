@@ -30,6 +30,12 @@ namespace BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_
         #endregion
 
         #region --METODOS--
+        /// <summary>
+        /// Sobrecarga del == para comparar dos cartas por el PALO de la misma
+        /// </summary>
+        /// <param name="cartaUno"></param>
+        /// <param name="cartaDos"></param>
+        /// <returns>TRUE: Si los PALOS de ambas cartas son iguales || FALSE: Si los PALOS de ambas cartas son distintos </returns>
         public static bool operator ==(Carta cartaUno, Carta cartaDos)
         {
             bool validacion = false;
@@ -45,6 +51,22 @@ namespace BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_
         public static bool operator !=(Carta cartaUno, Carta cartaDos)
         {
             return !(cartaUno == cartaDos);
+        }
+
+        public override bool Equals(object obj)
+        {
+            bool validacion = false;
+            if (obj is Carta)
+            {
+                validacion = this == ((Carta)obj);
+            }
+
+            return validacion;
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();  
         }
         #endregion
     }

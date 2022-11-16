@@ -24,9 +24,10 @@ namespace BIBLOTECA_PARCIAL_02_PEREZCARDENAL.PATRICIO_
         public int PartidasJugadas { get => partidasJugadas; set => partidasJugadas = value; }
         public float WinRate { get => winRate; set => winRate = value; }
         #endregion
-        #region--CONSTRUCTORES-
-        #endregion
         #region --METODOS--
+        /// <summary>
+        /// Metodo que se encarga de actualizar el valor del WINRATE mediante una regla de 3 simple utilizando el valor de las partidas ganadas y las partidas jugadas.
+        /// </summary>
         public void ActualizarWinRate()
         {
             this.winRate = (float)(this.partidasGanadas * 100) / this.partidasJugadas;

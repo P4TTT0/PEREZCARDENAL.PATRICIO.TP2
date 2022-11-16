@@ -39,8 +39,10 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
             this.textBoxUsuario = new System.Windows.Forms.TextBox();
             this.buttonRegistrarse = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLineaContraseña)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelRegistrar
@@ -173,12 +175,22 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
             this.buttonCancelar.UseVisualStyleBackColor = false;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.pictureBox1.Location = new System.Drawing.Point(19, 194);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(301, 10);
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormRegistrarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.ClientSize = new System.Drawing.Size(661, 437);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonRegistrarse);
             this.Controls.Add(this.buttonMostrarContraseña);
@@ -195,6 +207,7 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
             this.Load += new System.EventHandler(this.FormRegistrarUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLineaContraseña)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,5 +225,6 @@ namespace FORMS_PARCIAL_02_PEREZCARDENAL.PATRICIO_
         private System.Windows.Forms.TextBox textBoxUsuario;
         private System.Windows.Forms.Button buttonRegistrarse;
         private System.Windows.Forms.Button buttonCancelar;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
